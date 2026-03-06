@@ -1,0 +1,19 @@
+.ecoai-not-found-page {
+  background-color: rgb(23, 23, 23);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #bdbbbb;
+  font-family: "Roboto";
+}
+
+.ecoai-not-found-btn {
+  background-color: transparent;
+  border: none;
+  font-family: "Roboto";
+  color: #bdbbbb;
+  text-decoration: underline;
+  cursor: pointer;
+}

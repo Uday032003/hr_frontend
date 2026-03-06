@@ -1,0 +1,984 @@
+.ecoai-admin-user-calendar-right-container::-webkit-scrollbar {
+  display: none;
+}
+
+.ecoai-admin-user-calendar-bg-container {
+  background-color: rgb(23, 23, 23);
+  background-size: cover;
+  width: 100%;
+  height: 88vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto";
+}
+
+.ecoai-admin-user-calendar-right-container {
+  width: 82%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 60px;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.ecoai-admin-user-calendar-not-found-right-container {
+  width: 82%;
+  height: 100%;
+  padding: 60px;
+  color: #bdbbbb;
+}
+
+.ecoai-admin-user-calendar-not-found-right-container-text {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.ecoai-admin-user-calendar-not-found-right-container-btn {
+  font-family: "Roboto";
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #bdbbbb;
+  margin-left: 100px;
+}
+
+.ecoai-admin-user-calendar-heading {
+  color: #bdbbbb;
+  font-size: 25px;
+  align-self: flex-start;
+  margin-bottom: 0;
+  display: flex;
+}
+
+.ecoai-admin-user-calendar-role-container {
+  align-self: flex-start;
+  position: relative;
+}
+
+.ecoai-admin-user-calendar-role-btn {
+  background-color: transparent;
+  border: none;
+  color: #4f99bc;
+  font-size: 14px;
+  padding-top: 15px;
+  cursor: pointer;
+  text-shadow: 0 0 2px #4f99bc;
+  animation: popping 0.8s infinite alternate;
+  font-family: "Roboto";
+}
+
+@keyframes popping {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1.01);
+  }
+}
+
+.ecoai-admin-user-calendar-role-btn:hover {
+  text-decoration: underline;
+}
+
+.ecoai-admin-user-calendar-role-pop-desc {
+  position: absolute;
+  color: #bdbbbb;
+  font-size: 12px;
+  width: 175px;
+  font-family: "Roboto";
+  bottom: -25px;
+  background-color: #2f2d2d;
+  border-radius: 5px;
+  padding: 8px 10px;
+}
+
+.ecoai-admin-user-calendar-calendar-section {
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0px 20px 0px 20px;
+}
+
+.ecoai-admin-username-calendar-container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.ecoai-admin-user-calendar-month-year-selectors-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.ecoai-admin-user-calendar-month-selector,
+.ecoai-admin-user-calendar-year-selector {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 2px solid rgb(43, 42, 42);
+  background-color: transparent;
+  color: #bdbbbb;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-size: 15px;
+  outline: none;
+  margin-left: 10px;
+}
+
+.ecoai-admin-user-calendar-select-option {
+  padding: 8px 12px;
+  border: 1px solid rgb(43, 42, 42);
+  background-color: rgb(23, 23, 23);
+  color: #bdbbbb;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-size: 15px;
+  outline: none;
+}
+
+.ecoai-admin-user-calendar-select-option:checked {
+  color: #4f99bc;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.react-calendar {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  border: 2px solid rgb(43, 42, 42);
+}
+
+.react-calendar__navigation {
+  background: transparent;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.react-calendar__navigation__prev-button,
+.react-calendar__navigation__next-button {
+  color: #bdbbbb;
+  font-size: 20px;
+  background-color: transparent !important;
+}
+
+.react-calendar__navigation__prev-button,
+.react-calendar__navigation__next-button:hover {
+  background: transparent !important;
+}
+
+.react-calendar__navigation__label {
+  font-size: 18px;
+  font-weight: 600;
+  background-color: transparent !important;
+  color: #bdbbbb;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  color: #4f99bc;
+  font-weight: 600;
+  text-decoration: underline;
+  margin-bottom: 12px;
+}
+
+.react-calendar__tile {
+  border-radius: 10px;
+  background: transparent;
+  color: #bdbbbb;
+  font-weight: 500;
+  border: 2px solid transparent;
+  border-left: none !important;
+  border-right: none !important;
+  box-sizing: border-box;
+}
+
+.react-calendar__tile:hover {
+  border: 2px solid #bdbbbb !important;
+}
+
+.react-calendar__tile--active {
+  background: #bdbbbb !important;
+  color: #171717 !important;
+  border: 2px solid #bdbbbb !important;
+}
+
+.react-calendar__tile--now {
+  background: #4f99bc;
+  border: 2px solid #bdbbbb;
+  border-radius: 10px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.react-calendar__tile:enabled:hover {
+  background: transparent !important;
+}
+
+.react-calendar__tile--active:enabled:hover {
+  background: #bdbbbb !important;
+  border: 2px solid #bdbbbb;
+}
+
+.react-calendar__tile--now:enabled:hover {
+  background: #4f99bc !important;
+  border: 2px solid #bdbbbb !important;
+}
+
+.react-calendar__tile--now.react-calendar__tile--active {
+  background: #4f99bc !important;
+  color: #ffffff !important;
+  border: 2px solid #bdbbbb !important;
+}
+
+.green-date {
+  background: green !important;
+  color: #ffffff !important;
+  border-radius: 10px;
+}
+
+.red-date {
+  background: #b94040 !important;
+  color: #ffffff !important;
+  border-radius: 10px;
+}
+
+.purple-date {
+  background: purple !important;
+  color: #ffffff !important;
+  border-radius: 10px;
+}
+
+.orange-green-date {
+  background: linear-gradient(to left, green 80%, orange) !important;
+  color: #ffffff !important;
+  border-radius: 10px;
+}
+
+.green-orange-date {
+  background: linear-gradient(to right, green 80%, orange) !important;
+  color: #ffffff !important;
+  border-radius: 10px;
+}
+
+.orange-purple-date {
+  background: linear-gradient(to left, purple 80%, orange) !important;
+  color: #ffffff !important;
+  border-radius: 10px;
+}
+
+.purple-orange-date {
+  background: linear-gradient(to right, purple 80%, orange) !important;
+  color: #ffffff !important;
+  border-radius: 10px;
+}
+
+.orange-green-orange-date {
+  background: radial-gradient(green, orange) !important;
+  color: #ffffff !important;
+  border-radius: 10px;
+}
+
+.orange-purple-orange-date {
+  background: radial-gradient(purple, orange) !important;
+  color: #ffffff !important;
+  border-radius: 10px;
+}
+
+.half-red-date {
+  background: linear-gradient(to right, transparent, #b94040) !important;
+  color: #ffffff !important;
+  border-radius: 10px;
+}
+
+.red-date:enabled:hover {
+  background: #b94040 !important;
+  border: 2px solid #bdbbbb;
+}
+
+.green-date:enabled:hover {
+  background: green !important;
+  border: 2px solid #bdbbbb;
+}
+
+.purple-date:enabled:hover {
+  background: purple !important;
+  border: 2px solid #bdbbbb;
+}
+
+.orange-green-date:enabled:hover {
+  background: linear-gradient(to left, green 80%, orange) !important;
+  border: 2px solid #bdbbbb;
+}
+
+.green-orange-date:enabled:hover {
+  background: linear-gradient(to right, green 80%, orange) !important;
+  border: 2px solid #bdbbbb;
+}
+
+.orange-purple-date:enabled:hover {
+  background: linear-gradient(to left, purple 80%, orange) !important;
+  border: 2px solid #bdbbbb;
+}
+
+.purple-orange-date:enabled:hover {
+  background: linear-gradient(to right, purple 80%, orange) !important;
+  border: 2px solid #bdbbbb;
+}
+
+.orange-green-orange-date:enabled:hover {
+  background: radial-gradient(green, orange) !important;
+  border: 2px solid #bdbbbb;
+}
+
+.orange-purple-orange-date:enabled:hover {
+  background: radial-gradient(purple, orange) !important;
+  border: 2px solid #bdbbbb;
+}
+
+.half-red-date:enabled:hover {
+  background: linear-gradient(to right, transparent, #b94040) !important;
+  border: 2px solid #bdbbbb;
+}
+
+.ecoai-admin-user-calendar-button {
+  background-color: transparent;
+  color: #bdbbbb;
+  border: 1px solid #bdbbbb;
+  border-radius: 5px;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  transition: all 0.3s ease;
+  width: 120px;
+  height: 60px;
+}
+
+.ecoai-admin-user-calendar-button:hover {
+  text-shadow: 0 0 5px #4f99bc;
+  transform: skew(-1deg) scale(0.98);
+}
+
+.ecoai-admin-user-calendar-selected-date-text {
+  margin-top: 5px;
+  color: #4f99bc;
+  font-size: 14px;
+  animation: poppingDate 0.3s ease-in-out infinite alternate-reverse;
+}
+@keyframes poppingDate {
+  0% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.ecoai-admin-user-calendar-tiles-container {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 2px solid rgb(43, 42, 42);
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.ecoai-admin-user-calendar-tile-container {
+  width: 25%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.ecoai-admin-user-calendar-tile {
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.ecoai-admin-today-tile-color {
+  background-color: #4f99bc;
+  color: #bdbbbb;
+}
+
+.ecoai-admin-selected-tile-color {
+  background-color: #bdbbbb;
+}
+
+.ecoai-admin-absent-tile-color {
+  background-color: #b94040;
+  color: #bdbbbb;
+}
+
+.ecoai-admin-present-wfo-tile-color {
+  background-color: green;
+  color: #bdbbbb;
+}
+
+.ecoai-admin-present-wfh-tile-color {
+  background-color: purple;
+  color: #bdbbbb;
+}
+
+.ecoai-admin-present-wfo-late-tile-color {
+  background: linear-gradient(to left, green 70%, orange);
+  color: #bdbbbb;
+}
+
+.ecoai-admin-present-wfo-less-tile-color {
+  background: linear-gradient(to right, green 70%, orange);
+  color: #bdbbbb;
+}
+
+.ecoai-admin-present-wfo-late-less-tile-color {
+  background: radial-gradient(green, orange);
+  color: #bdbbbb;
+}
+
+.ecoai-admin-present-wfh-late-tile-color {
+  background: linear-gradient(to left, purple 70%, orange);
+  color: #bdbbbb;
+}
+
+.ecoai-admin-present-wfh-less-tile-color {
+  background: linear-gradient(to right, purple 70%, orange);
+  color: #bdbbbb;
+}
+
+.ecoai-admin-present-wfh-late-less-tile-color {
+  background: radial-gradient(purple, orange);
+  color: #bdbbbb;
+}
+
+.ecoai-admin-not-logged-out-tile-color {
+  background: linear-gradient(to right, transparent, #b94040);
+  color: #bdbbbb;
+}
+
+.ecoai-admin-present-wfo-late-tile-text {
+  color: green;
+  font-size: 12px;
+}
+
+.ecoai-admin-present-wfo-less-tile-text {
+  color: green;
+  font-size: 12px;
+}
+
+.ecoai-admin-present-wfo-late-less-tile-text {
+  color: orange;
+  font-size: 12px;
+}
+
+.ecoai-admin-present-wfh-late-tile-text {
+  color: purple;
+  font-size: 12px;
+}
+
+.ecoai-admin-present-wfh-less-tile-text {
+  color: purple;
+  font-size: 12px;
+}
+
+.ecoai-admin-present-wfh-late-less-tile-text {
+  color: orange;
+  font-size: 12px;
+}
+
+.ecoai-admin-today-tile-text {
+  color: #4f99bc;
+  font-size: 12px;
+}
+
+.ecoai-admin-selected-tile-text {
+  color: #bdbbbb;
+  font-size: 12px;
+}
+
+.ecoai-admin-present-wfo-tile-text {
+  color: #4fbc53;
+  font-size: 12px;
+}
+
+.ecoai-admin-present-wfh-tile-text {
+  color: purple;
+  font-size: 12px;
+}
+
+.ecoai-admin-absent-tile-text {
+  color: #b94040;
+  font-size: 12px;
+}
+
+.ecoai-admin-user-calendar-loading-view-container {
+  width: 80%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.ecoai-admin-user-calendar-delete-user-btn {
+  position: fixed;
+  bottom: 100px;
+  right: 80px;
+  color: #b94040;
+  background-color: transparent;
+  border: 1px solid #b94040;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+.ecoai-admin-user-calendar-delete-user-icon-btn {
+  display: none;
+}
+
+.ecoai-admin-user-calendar-delete-user-btn:hover {
+  transform: scale(1.1);
+  background-color: #b94040;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.ecoai-admin-user-calendar-modal {
+  width: 400px;
+  padding: 15px;
+  padding-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ecoai-admin-user-calendar-modal-heading {
+  font-size: 15px;
+  align-self: flex-start;
+  text-align: center;
+}
+
+.ecoai-admin-user-calendar-modal-input {
+  width: 100%;
+  padding: 8px;
+  outline: none;
+  border: 1px solid red;
+  border-radius: 5px;
+  margin-top: 3px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  background-color: transparent;
+  color: #bdbbbb;
+}
+
+.ecoai-admin-user-calendar-modal-input:focus {
+  border: 1px solid #4f99bc;
+}
+
+.ecoai-admin-user-calendar-modal-alert-container {
+  width: 80%;
+  border: 1px solid #2f2d2d;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  background-color: #101010;
+  margin-bottom: 10px;
+}
+
+.ecoai-admin-user-calendar-modal-alert-container-span {
+  color: orange;
+  text-align: center;
+}
+
+.ecoai-admin-user-calendar-model-btns-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ecoai-admin-user-calendar-model-btn {
+  width: 70%;
+  font-family: "Roboto";
+  font-size: 15px;
+  color: #b94040;
+  background-color: transparent;
+  border: 1px solid #b94040;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+.ecoai-admin-user-calendar-model-btn:hover {
+  transform: scale(1.1);
+  background-color: #b94040;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.ecoai-admin-user-calendar-back-icon-container {
+  position: absolute;
+  align-self: flex-start;
+  color: #bdbbbb;
+  font-size: 18px;
+  top: 30px;
+  left: 60px;
+  cursor: pointer;
+  background-color: transparent;
+  font-family: "Roboto";
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ecoai-admin-user-calendar-back-icon {
+  font-size: 20px;
+}
+
+.ecoai-admin-user-calendar-back-icon-container:hover {
+  color: #4f99bc;
+  transform: scale(0.9);
+}
+
+@media (max-width: 1000px) {
+  .ecoai-admin-user-calendar-bg-container {
+    width: 100%;
+    height: 90dvh;
+    position: relative;
+    padding-bottom: 85px;
+  }
+
+  .ecoai-admin-user-calendar-right-container {
+    width: 100%;
+    padding: 20px;
+    overflow: auto;
+  }
+
+  .ecoai-admin-user-calendar-not-found-right-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .ecoai-admin-user-calendar-not-found-right-container-text {
+    font-size: 18px;
+  }
+
+  .ecoai-admin-user-calendar-not-found-right-container-btn {
+    margin-left: 40px;
+    font-size: 12px;
+  }
+
+  .ecoai-admin-user-calendar-heading {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+
+  .ecoai-admin-user-calendar-role-btn {
+    font-size: 12px;
+    padding-top: 10px;
+  }
+
+  .ecoai-admin-user-calendar-role-pop-desc {
+    font-size: 10px;
+    width: 145px;
+    bottom: -25px;
+    left: 30px;
+    padding: 6px 8px;
+  }
+
+  .ecoai-admin-user-calendar-calendar-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+  }
+
+  .ecoai-admin-username-calendar-container {
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  .ecoai-admin-user-calendar-month-year-selectors-container {
+    margin-bottom: 10px;
+  }
+
+  .ecoai-admin-user-calendar-month-selector,
+  .ecoai-admin-user-calendar-year-selector {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 13px;
+  }
+
+  .ecoai-admin-user-calendar-select-option {
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+
+  .react-calendar {
+    border-radius: 8px !important;
+    padding: 5px !important;
+  }
+
+  .react-calendar__navigation {
+    margin-bottom: 0 !important;
+  }
+
+  .react-calendar__navigation__prev-button,
+  .react-calendar__navigation__next-button {
+    font-size: 15px !important;
+  }
+
+  .react-calendar__navigation__label {
+    font-size: 15px !important;
+  }
+
+  .react-calendar__month-view__weekdays__weekday {
+    margin-bottom: 3px !important;
+    font-size: 11px !important;
+  }
+
+  .react-calendar__tile {
+    padding: 10px 0 !important;
+    border-radius: 8px !important;
+    font-size: 12px !important;
+  }
+
+  .react-calendar__tile--now {
+    border-radius: 8px !important;
+  }
+
+  .green-date {
+    border-radius: 8px !important;
+  }
+
+  .red-date {
+    border-radius: 8px !important;
+  }
+
+  .purple-date {
+    border-radius: 8px !important;
+  }
+
+  .orange-green-date {
+    border-radius: 8px !important;
+  }
+
+  .green-orange-date {
+    border-radius: 8px !important;
+  }
+
+  .orange-purple-date {
+    border-radius: 8px !important;
+  }
+
+  .purple-orange-date {
+    border-radius: 8px !important;
+  }
+
+  .orange-green-orange-date {
+    border-radius: 8px !important;
+  }
+
+  .orange-purple-orange-date {
+    border-radius: 8px !important;
+  }
+
+  .half-red-date {
+    border-radius: 8px !important;
+  }
+
+  .ecoai-admin-user-calendar-tiles-container {
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .ecoai-admin-user-calendar-tile-container {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 7px;
+  }
+
+  .ecoai-admin-user-calendar-tile {
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    font-size: 8px;
+  }
+
+  .ecoai-admin-present-wfo-late-tile-text {
+    font-size: 8px;
+    text-align: center;
+  }
+
+  .ecoai-admin-present-wfo-less-tile-text {
+    font-size: 8px;
+    text-align: center;
+  }
+
+  .ecoai-admin-present-wfo-late-less-tile-text {
+    font-size: 8px;
+    text-align: center;
+  }
+
+  .ecoai-admin-present-wfh-late-tile-text {
+    font-size: 8px;
+    text-align: center;
+  }
+
+  .ecoai-admin-present-wfh-less-tile-text {
+    font-size: 8px;
+    text-align: center;
+  }
+
+  .ecoai-admin-present-wfh-late-less-tile-text {
+    font-size: 8px;
+    text-align: center;
+  }
+
+  .ecoai-admin-today-tile-text {
+    font-size: 8px;
+    text-align: center;
+  }
+
+  .ecoai-admin-selected-tile-text {
+    font-size: 8px;
+    text-align: center;
+  }
+
+  .ecoai-admin-present-wfo-tile-text {
+    font-size: 8px;
+    text-align: center;
+  }
+
+  .ecoai-admin-present-wfh-tile-text {
+    font-size: 8px;
+    text-align: center;
+  }
+
+  .ecoai-admin-absent-tile-text {
+    font-size: 8px;
+    text-align: center;
+  }
+
+  .ecoai-admin-user-calendar-loading-view-container {
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  .ecoai-admin-user-calendar-delete-user-icon-btn {
+    display: inline;
+    bottom: 80px;
+    right: 2px;
+    border-radius: 5px;
+    position: fixed;
+    color: #b94040;
+    background-color: transparent;
+    border: 1px solid #b94040;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 7px;
+  }
+
+  .ecoai-admin-user-calendar-delete-user-icon-btn:hover {
+    transform: scale(1.1);
+    background-color: #b94040;
+    color: #ffffff;
+  }
+
+  .ecoai-admin-user-calendar-delete-user-btn-icon:hover {
+    color: #ffffff;
+  }
+
+  .ecoai-admin-user-calendar-delete-user-btn-icon {
+    font-size: 14px;
+  }
+
+  .ecoai-admin-user-calendar-delete-user-btn {
+    display: none;
+  }
+
+  .ecoai-admin-user-calendar-modal {
+    width: 250px;
+    padding: 0px;
+    padding-top: 15px;
+    padding-bottom: 0px;
+  }
+
+  .ecoai-admin-user-calendar-modal-heading {
+    font-size: 12px;
+  }
+
+  .ecoai-admin-user-calendar-modal-input {
+    padding: 8px;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .ecoai-admin-user-calendar-modal-alert-container {
+    padding: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .ecoai-admin-user-calendar-model-btn {
+    font-size: 14px;
+    padding: 7px 8px;
+    border-radius: 5px;
+  }
+
+  .ecoai-admin-user-calendar-back-icon-container {
+    font-size: 15px;
+    top: 10px;
+    left: 20px;
+    gap: 3px;
+  }
+
+  .ecoai-admin-user-calendar-back-icon {
+    font-size: 18px;
+  }
+}

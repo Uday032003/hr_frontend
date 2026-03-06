@@ -1,0 +1,84 @@
+.ecoai-adminsidebar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 18%;
+  height: 88vh;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  padding-top: 20px;
+  border-right: 1px solid rgb(43, 42, 42);
+  font-family: "Roboto";
+}
+
+.ecoai-adminsidebar-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 5px;
+  padding-bottom: 3px;
+}
+
+.ecoai-adminsidebar-item-btn {
+  width: 100%;
+  padding: 12px;
+  padding-left: 7px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: transparent;
+  color: #bdbbbb;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: "Roboto";
+}
+
+.ecoai-adminsidebar-item-btn:hover {
+  background-color: #2b2626;
+}
+
+.ecoai-adminsidebar-item-btn-selected {
+  background-color: #2b2626;
+  font-weight: 500;
+  color: #dcd8d8;
+}
+
+.selected-icon-color {
+  color: #4f99bc;
+}
+
+.ecoai-adminsidebar-icon {
+  font-size: 20px;
+  margin-right: 7px;
+}
+
+.users-icon {
+  font-size: 18px;
+}
+
+.attendance-icon {
+  font-size: 19px;
+}
+
+.calendar-icon {
+  font-size: 21px;
+}
+
+.profile-icon {
+  font-size: 17px;
+}
+
+.ecoai-adminsidebar-item-text {
+  font-size: 16px;
+}
+
+@media (max-width: 1000px) {
+  .ecoai-adminsidebar-container {
+    display: none;
+  }
+}

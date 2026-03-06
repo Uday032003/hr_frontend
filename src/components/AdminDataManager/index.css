@@ -1,0 +1,581 @@
+.ecoai-admin-data-manager-bg-container {
+  background-color: rgb(23, 23, 23);
+  background-size: cover;
+  width: 100%;
+  height: 88vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto";
+}
+
+.ecoai-admin-data-manager-right-container {
+  width: 82%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 30px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.ecoai-admin-data-manager-title {
+  color: #bdbbbb;
+  margin-bottom: 40px;
+}
+
+.ecoai-admin-data-manager-btns-container {
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.ecoai-admin-data-manager-btn-cont {
+  width: 180px;
+  height: 60px;
+  background: rgb(33, 31, 31);
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.ecoai-admin-data-manager-btn {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  color: #bdbbbb;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s ease;
+  font-family: "Roboto";
+}
+
+.ecoai-admin-data-manager-btn svg {
+  font-size: 20px;
+}
+
+.ecoai-admin-data-manager-btn:hover {
+  transform: scale(1.05);
+}
+
+.ecoai-admin-data-manager-btn-cont:hover {
+  background: rgb(40, 38, 38);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.ecoai-admin-data-manager-modal-form {
+  width: 420px;
+  z-index: 15;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.ecoai-admin-data-manager-modal-close-icon-btn {
+  position: absolute;
+  right: 5px;
+  top: 11px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.ecoai-admin-data-manager-modal-close-icon {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.ecoai-admin-data-manager-modal-heading {
+  font-size: 22px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.ecoai-admin-data-manager-modal-inps-select-container {
+  width: 100%;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+.ecoai-admin-data-manager-modal-select-add-btn-container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.ecoai-admin-data-manager-modal-select-container {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgb(43, 42, 42);
+  background-color: transparent;
+  color: #bdbbbb;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-size: 15px;
+  outline: none;
+  margin-left: 10px;
+  height: 40px;
+}
+
+.ecoai-admin-data-manager-modal-select-option {
+  padding: 8px 12px;
+  border: 1px solid rgb(43, 42, 42);
+  background-color: rgb(23, 23, 23);
+  color: #bdbbbb;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-size: 15px;
+  outline: none;
+}
+
+.ecoai-admin-data-manager-modal-select-option:checked {
+  color: #4f99bc;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.ecoai-admin-data-manager-modal-add-btn {
+  width: 50%;
+  height: 60px;
+  align-self: flex-end;
+  padding: 12px;
+  cursor: pointer;
+  background-color: #4f99bc;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-family: "Roboto";
+  font-weight: 500;
+  position: relative;
+}
+
+.ecoai-admin-data-manager-modal-add-btn-absolute {
+  position: absolute;
+  bottom: -16px;
+  right: 2px;
+  font-size: 11px;
+  color: #bdbbbb;
+}
+
+.ecoai-admin-data-manager-modal-radio-boxs-inp-container {
+  width: 100%;
+  padding: 10px;
+  padding-top: 0;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ecoai-admin-data-manager-modal-radio-boxs-container {
+  width: 85%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.ecoai-admin-data-manager-modal-radio-box {
+  display: flex;
+  gap: 5px;
+}
+
+.ecoai-admin-data-manager-modal-radio {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #bdbbbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.ecoai-admin-data-manager-modal-radio:checked {
+  background-color: #4f99bc;
+  border-color: #4f99bc;
+}
+
+.ecoai-admin-data-manager-modal-radio-label {
+  cursor: pointer;
+}
+
+.ecoai-admin-data-manager-modal-inp-container {
+  width: 70%;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ecoai-admin-data-manager-modal-inp {
+  display: none;
+}
+
+.ecoai-admin-data-manager-modal-user-drag-zone-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #444;
+  background-color: #1a1a1a;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.ecoai-admin-data-manager-modal-secret-code-btn-container {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.ecoai-admin-data-manager-modal-secret-code-btn {
+  padding: 8px 10px;
+  border: 1px solid #4f99bc;
+  border-radius: 5px;
+  background-color: transparent;
+  font-family: "Roboto";
+  color: #4f99bc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ecoai-admin-data-manager-modal-secret-code-btn:hover {
+  background-color: #4f99bc;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.ecoai-admin-data-manager-modal-description {
+  font-size: 13px;
+  color: orange;
+  text-align: center;
+}
+
+.ecoai-admin-data-manager-modal-user-drag-zone-cont.dragging {
+  border-color: #4f99bc;
+  background-color: rgba(79, 153, 188, 0.1);
+}
+
+.ecoai-admin-data-manager-modal-user-drag-zone-cont.success {
+  border-color: #22c55e;
+  background-color: rgba(34, 197, 94, 0.1);
+}
+
+.ecoai-admin-data-manager-modal-upload-text {
+  font-size: 14px;
+  color: #bdbbbb;
+}
+
+.ecoai-admin-data-manager-modal-file-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #9ca3af;
+  position: relative;
+  width: 80%;
+}
+
+.ecoai-admin-data-manager-modal-file-remove-btn {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  top: 40%;
+  right: 0;
+  cursor: pointer;
+}
+
+.ecoai-admin-data-manager-modal-file-remove-icon {
+  color: #bdbbbb;
+}
+
+.ecoai-admin-data-manager-hovered {
+  display: inline;
+}
+
+.ecoai-admin-data-manager-modal-highlight-text {
+  color: #4f99bc;
+  font-weight: 500;
+}
+
+.ecoai-admin-data-manager-modal-secret-code-form {
+  width: 420px;
+  z-index: 15;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.ecoai-admin-data-manager-modal-secret-code-heading {
+  font-size: 15px;
+  align-self: flex-start;
+  text-align: center;
+}
+
+.ecoai-admin-data-manager-modal-secret-code-input {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #bdbbbb;
+  border-radius: 5px;
+  margin-top: 3px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  background-color: transparent;
+  color: #bdbbbb;
+}
+
+.ecoai-admin-data-manager-modal-secret-code-input:focus {
+  border: 1px solid #4f99bc;
+}
+
+.ecoai-admin-data-manager-model-btns-secret-code-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.ecoai-admin-data-manager-model-secret-code-btn {
+  width: 40%;
+  font-family: "Roboto";
+  font-size: 15px;
+  background-color: transparent;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+.ecoai-admin-data-manager-model-secret-code-btn.cancel {
+  color: #bdbbbb;
+  border: 1px solid #bdbbbb;
+}
+
+.ecoai-admin-data-manager-model-secret-code-btn.import {
+  color: #4f99bc;
+  border: 1px solid #4f99bc;
+}
+
+.ecoai-admin-data-manager-model-secret-code-btn.import:hover {
+  transform: scale(1.1);
+  background-color: #4f99bc;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.ecoai-admin-data-manager-model-secret-code-btn.cancel:hover {
+  transform: scale(1.1);
+  background-color: #bdbbbb;
+  color: #000000;
+  font-weight: 500;
+}
+
+@media (max-width: 1000px) {
+  .ecoai-admin-data-manager-bg-container {
+    width: 100%;
+    height: 90dvh;
+    position: relative;
+    padding-bottom: 85px;
+  }
+
+  .ecoai-admin-data-manager-right-container {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    overflow-y: auto;
+  }
+
+  .ecoai-admin-data-manager-title {
+    font-size: 24px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+
+  .ecoai-admin-data-manager-btns-container {
+    width: 100%;
+    height: 100%;
+    min-width: 280px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .ecoai-admin-data-manager-btn-cont {
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+  }
+
+  .ecoai-admin-data-manager-btn {
+    font-size: 14px;
+  }
+
+  .ecoai-admin-data-manager-btn svg {
+    font-size: 17px;
+  }
+
+  .ecoai-admin-data-manager-modal-form {
+    width: 100%;
+    min-width: 280px;
+  }
+
+  .ecoai-admin-data-manager-modal-close-icon-btn {
+    right: 0;
+    top: 5px;
+  }
+
+  .ecoai-admin-data-manager-modal-close-icon {
+    font-size: 16px;
+  }
+
+  .ecoai-admin-data-manager-modal-heading {
+    font-size: 18px;
+    padding-top: 8px;
+  }
+
+  .ecoai-admin-data-manager-modal-inps-select-container {
+    width: 100%;
+    padding-left: 0px;
+    padding-bottom: 5px;
+  }
+
+  .ecoai-admin-data-manager-modal-select-add-btn-container {
+    width: 100%;
+  }
+
+  .ecoai-admin-data-manager-modal-select-container {
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 13px;
+    margin-left: 0px;
+    height: 35px;
+  }
+
+  .ecoai-admin-data-manager-modal-select-option {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .ecoai-admin-data-manager-modal-select-option:checked {
+    font-size: 14px;
+  }
+
+  .ecoai-admin-data-manager-modal-add-btn {
+    width: 50%;
+    height: 50px;
+    align-self: flex-end;
+    padding: 12px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ecoai-admin-data-manager-modal-radio-boxs-inp-container {
+    padding: 5px;
+  }
+
+  .ecoai-admin-data-manager-modal-radio-boxs-container {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  .ecoai-admin-data-manager-modal-radio-box {
+    display: flex;
+    gap: 2px;
+  }
+
+  .ecoai-admin-data-manager-modal-radio {
+    width: 13px;
+    height: 13px;
+  }
+
+  .ecoai-admin-data-manager-modal-inp-container {
+    width: 85%;
+    padding: 8px;
+  }
+
+  .ecoai-admin-data-manager-modal-user-drag-zone-cont {
+    padding: 15px;
+  }
+
+  .ecoai-admin-data-manager-modal-secret-code-btn-container {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .ecoai-admin-data-manager-modal-secret-code-btn {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .ecoai-admin-data-manager-modal-description {
+    font-size: 12px;
+    color: orange;
+  }
+
+  .ecoai-admin-data-manager-modal-upload-text {
+    font-size: 12px;
+    color: #bdbbbb;
+  }
+
+  .ecoai-admin-data-manager-modal-file-info {
+    font-size: 12px;
+  }
+
+  .ecoai-admin-data-manager-modal-file-remove-btn {
+    top: 40%;
+  }
+
+  .ecoai-admin-data-manager-modal-secret-code-form {
+    width: 80%;
+    min-width: 250px;
+    padding: 5px;
+  }
+
+  .ecoai-admin-data-manager-modal-secret-code-heading {
+    font-size: 12px;
+  }
+
+  .ecoai-admin-data-manager-modal-secret-code-input {
+    padding: 7px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+  .ecoai-admin-data-manager-model-secret-code-btn {
+    font-size: 13px;
+    padding: 8px 10px;
+    border-radius: 5px;
+  }
+}

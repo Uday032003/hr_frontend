@@ -1,0 +1,115 @@
+.ecoai-admin-settings-bg-container {
+  background-color: rgb(23, 23, 23);
+  background-size: cover;
+  width: 100%;
+  height: 88vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto";
+  color: #bdbbbb;
+}
+
+.ecoai-admin-settings-right-container {
+  width: 82%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 30px;
+}
+
+.ecoai-admin-settings-theme-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+  padding: 20px;
+  margin-left: 30px;
+}
+
+.ecoai-admin-settings-theme-text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.ecoai-admin-settings-theme-buttons-container {
+  width: 120px;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.ecoai-admin-settings-theme-btn {
+  width: 60px;
+  height: 30px;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  background-color: transparent;
+  border: 1px solid #bdbbbb;
+  color: #ffffff;
+}
+
+.ecoai-admin-settings-theme-selected-btn {
+  width: 40px;
+  font-size: 10px;
+  height: 25px;
+  background-color: #4f99bc;
+}
+
+@media (max-width: 1000px) {
+  .ecoai-admin-settings-bg-container {
+    width: 100%;
+    height: 90dvh;
+    position: relative;
+    padding-bottom: 85px;
+  }
+
+  .ecoai-admin-settings-right-container {
+    width: 100%;
+    padding: 15px;
+    overflow: auto;
+  }
+
+  .ecoai-admin-settings-heading {
+    font-size: 24px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+
+  .ecoai-admin-settings-theme-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    padding: 15px;
+    margin-left: 10px;
+  }
+
+  .ecoai-admin-settings-theme-text {
+    font-size: 16px;
+  }
+
+  .ecoai-admin-settings-theme-buttons-container {
+    width: 100px;
+    height: 25px;
+  }
+
+  .ecoai-admin-settings-theme-btn {
+    width: 50px;
+    height: 25px;
+    font-size: 10px;
+  }
+
+  .ecoai-admin-settings-theme-selected-btn {
+    width: 35px;
+    font-size: 9px;
+    height: 20px;
+  }
+}

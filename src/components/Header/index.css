@@ -1,0 +1,29 @@
+.ecoai-header-bg-container {
+  background-color: rgb(23, 23, 23);
+  height: 12vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+}
+
+.ecoai-header-logo {
+  width: 130px;
+  height: 65px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 1000px) {
+  .ecoai-header-bg-container {
+    height: 10vh;
+  }
+
+  .ecoai-header-logo {
+    width: 100px;
+    height: 50px;
+    margin-left: 15px;
+  }
+}

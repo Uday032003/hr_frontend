@@ -1,0 +1,318 @@
+/* Chrome, Edge, Safari */
+.ecoai-user-tasks-new-item-input::-webkit-scrollbar {
+  width: 5px;
+}
+
+.ecoai-user-tasks-new-item-input::-webkit-scrollbar-track {
+  background: #1e1e1e;
+  border-radius: 3px;
+}
+
+.ecoai-user-tasks-new-item-input::-webkit-scrollbar-thumb {
+  background: #4f99bc;
+  border-radius: 3px;
+}
+
+.ecoai-user-tasks-list {
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.ecoai-user-tasks-list::-webkit-scrollbar {
+  display: none;
+}
+
+.ecoai-user-tasks-bg-container {
+  background-color: rgb(23, 23, 23);
+  background-size: cover;
+  width: 100%;
+  height: 88vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto";
+}
+
+.ecoai-user-tasks-right-container {
+  width: 82%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 30px;
+}
+
+.ecoai-user-tasks-heading {
+  color: #bdbbbb;
+}
+
+.ecoai-user-tasks-add-task-btn-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 70%;
+  background-color: #151515;
+  color: #bdbbbb;
+  border-radius: 10px;
+  min-height: 40vh;
+  max-height: 100%;
+}
+
+.ecoai-user-tasks-empty-container {
+  width: 100%;
+  height: 100%;
+}
+
+.ecoai-user-tasks-loader-container {
+  width: 70%;
+  height: 100%;
+}
+
+.ecoai-user-tasks-loader-inner-cont {
+  width: 80%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ecoai-user-tasks-task-container {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.ecoai-user-tasks-no-tasks-text {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+.ecoai-user-tasks-list {
+  flex: 1;
+  overflow-y: auto;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 30px;
+}
+
+.ecoai-user-tasks-list-item {
+  width: 85%;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 16px;
+  padding: 5px;
+  padding-top: 10px;
+  position: relative;
+}
+
+.ecoai-user-tasks-delete-btn {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  border: none;
+  background-color: transparent;
+  color: #b94040;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.ecoai-user-tasks-delete-btn-display {
+  display: block;
+}
+
+.ecoai-user-tasks-list-item:hover {
+  transform: scale(1.01);
+}
+
+.ecoai-user-tasks-list-item-span {
+  display: block;
+  white-space: normal;
+  word-break: break-all;
+  overflow-wrap: anywhere;
+  line-height: 1.6;
+  width: 90%;
+  padding-left: 28px;
+  text-indent: -18px;
+}
+
+.ecoai-user-tasks-list-item-divider {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #1d1c1c;
+  margin-top: 5px;
+  margin-left: 0;
+}
+
+.ecoai-user-tasks-new-item {
+  padding-left: 35px;
+  padding-bottom: 30px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.ecoai-user-tasks-new-item-input {
+  width: 60%;
+  background-color: rgb(40, 40, 40);
+  border: none;
+  font-size: 16px;
+  outline: none;
+  color: #bdbbbb;
+  padding: 5px 10px;
+  border-radius: 6px;
+  resize: none;
+  line-height: 1.5;
+  margin-left: 5px;
+  max-height: 100px;
+  overflow-y: hidden;
+}
+
+.ecoai-user-tasks-load-cont {
+  width: 60%;
+  padding: 5px 10px;
+  border-radius: 6px;
+  line-height: 1.5;
+  margin-left: 5px;
+}
+
+.ecoai-user-tasks-btn-container {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 16px;
+  color: #bdbbbb;
+}
+
+.ecoai-user-tasks-add-btn {
+  background-color: transparent;
+  padding: 10px;
+  width: 150px;
+  border: 1px solid #4f99bc;
+  color: #4f99bc;
+  font-size: 18px;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-weight: 500;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+@media (max-width: 1000px) {
+  .ecoai-user-tasks-bg-container {
+    width: 100%;
+    height: 90dvh;
+    position: relative;
+    padding-bottom: 85px;
+  }
+
+  .ecoai-user-tasks-right-container {
+    width: 100%;
+    padding: 20px;
+    overflow: auto;
+  }
+
+  .ecoai-user-tasks-heading {
+    font-size: 24px;
+  }
+
+  .ecoai-user-tasks-add-task-btn-container {
+    flex-direction: column;
+    width: 100%;
+    border-radius: 5px;
+    padding-top: 25px;
+  }
+
+  .ecoai-user-tasks-empty-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ecoai-user-tasks-loader-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ecoai-user-tasks-loader-inner-cont {
+    width: 100%;
+    height: 70%;
+  }
+
+  .ecoai-user-tasks-task-container {
+    width: 100%;
+    height: 85%;
+  }
+
+  .ecoai-user-tasks-no-tasks-text {
+    top: 40px;
+    left: 50px;
+  }
+
+  .ecoai-user-tasks-list {
+    padding: 15px;
+  }
+
+  .ecoai-user-tasks-list-item {
+    width: 95%;
+    gap: 0;
+    padding-top: 0px;
+  }
+
+  .ecoai-user-tasks-delete-btn {
+    top: 3px;
+    right: 5px;
+    font-size: 16px;
+  }
+
+  .ecoai-user-tasks-list-item-divider {
+    border-bottom: 1px solid #1d1c1c;
+  }
+
+  .ecoai-user-tasks-new-item {
+    padding-left: 25px;
+    padding-bottom: 20px;
+  }
+
+  .ecoai-user-tasks-new-item-input {
+    width: 80%;
+    font-size: 14px;
+    border-radius: 5px;
+    max-height: 70px;
+  }
+
+  .ecoai-user-tasks-load-cont {
+    width: 60%;
+    padding: 5px 10px;
+    border-radius: 6px;
+    line-height: 1.5;
+    margin-left: 5px;
+  }
+
+  .ecoai-user-tasks-btn-container {
+    width: 100%;
+    height: 15%;
+    justify-content: flex-end;
+    font-size: 14px;
+  }
+
+  .ecoai-user-tasks-add-btn {
+    padding: 8px;
+    width: 90px;
+    font-size: 15px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+  }
+}

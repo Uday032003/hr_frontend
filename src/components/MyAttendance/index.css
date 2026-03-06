@@ -1,0 +1,599 @@
+.ecoai-myattendance-right-container::-webkit-scrollbar {
+  display: none;
+}
+
+.ecoai-myattendance-present-past-success-tasks-list-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.ecoai-myattendance-present-past-success-tasks-list-container::-webkit-scrollbar-track {
+  background: #1e1e1e;
+  border-radius: 3px;
+}
+
+.ecoai-myattendance-present-past-success-tasks-list-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #4f99bc, #4f99bc);
+  border-radius: 3px;
+}
+
+.ecoai-myattendance-bg-container {
+  background-color: rgb(23, 23, 23);
+  background-size: cover;
+  width: 100%;
+  height: 88vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto";
+  color: #ffffff;
+}
+
+.ecoai-myattendance-right-container {
+  width: 82%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.ecoai-myattendance-loading-failed-view-container {
+  width: 80%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: #bdbbbb;
+}
+
+.ecoai-myattendance-present-past-future-view-container {
+  padding: 30px;
+  color: #bdbbbb;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.ecoai-myattendance-present-past-future-view-date {
+  color: #b5b5b5;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.ecoai-myattendance-present-past-future-view-name {
+  font-size: 30px;
+  padding-top: 5px;
+  margin-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.ecoai-myattendance-present-past-future-view-role {
+  color: #4f99bc;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.ecoai-myattendance-future-cannot-mark-text {
+  margin: 30px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ecoai-myattendance-future-cannot-mark-icon {
+  font-size: 20px;
+}
+
+.ecoai-myattendance-present-view-btns-container {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.ecoai-myattendance-present-view-btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+.wfo-btn {
+  background-color: #4f99bc;
+  color: #ffffff;
+}
+
+.wfh-btn {
+  background-color: #ffffff;
+  color: #4f99bc;
+}
+
+.selected-wfo {
+  padding: 8px 16px;
+  border: 2px solid #ffffff;
+}
+
+.selected-wfh {
+  padding: 8px 16px;
+  border: 2px solid #4f99bc;
+}
+
+.ecoai-myattendance-present-view-location-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.ecoai-myattendance-present-view-wfo-wfh-container {
+  padding: 10px;
+}
+
+.ecoai-myattendance-present-view-heading {
+  font-size: 23px;
+  margin-bottom: 15px;
+}
+
+.ecoai-myattendance-present-view-verify-location-btn {
+  padding: 8px;
+  width: 110px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.ecoai-myattendance-present-view-verify-location-btn-verified {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  width: 170px;
+  font-weight: 100;
+  font-size: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.ecoai-myattendance-present-view-location-icon {
+  color: green;
+  font-size: 20px;
+}
+
+.ecoai-myattendance-present-view-wfo-wfh-login-btn {
+  padding: 8px;
+  width: 60px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.ecoai-myattendance-present-past-success-main-container {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.ecoai-myattendance-present-past-success-container {
+  width: 100%;
+  max-width: 520px;
+  background: #151515;
+  border-radius: 12px;
+  padding: 20px 22px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+  border: 2px solid rgb(43, 42, 42);
+  position: relative;
+  padding-top: 40px;
+  margin-bottom: 20px;
+}
+
+.ecoai-myattendance-present-past-success-tasks-container {
+  width: 100%;
+  max-width: 400px;
+  background: #151515;
+  border-radius: 12px;
+  padding: 15px 22px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+  border: 2px solid rgb(43, 42, 42);
+  border-style: dashed;
+  color: #bdbbbb;
+}
+
+.ecoai-myattendance-present-past-success-tasks-heading {
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.ecoai-myattendance-present-past-success-tasks-empty-container {
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #bbbbbb;
+  font-size: 16px;
+}
+
+.ecoai-myattendance-present-past-success-tasks-list-container {
+  width: 100%;
+  max-height: 30vh;
+  overflow: auto;
+}
+
+.ecoai-myattendance-present-past-success-tasks-list {
+  flex: 1;
+  overflow-y: auto;
+  color: #bbbbbb;
+  font-size: 16px;
+  list-style: none;
+  padding: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0;
+  white-space: normal;
+  word-break: break-all;
+  overflow-wrap: anywhere;
+}
+
+.ecoai-myattendance-present-past-success-tasks-item {
+  width: 95%;
+  padding: 10px;
+  padding-left: 0;
+  overflow: hidden;
+}
+
+.ecoai-myattendance-present-past-success-container-inner-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #1d1c1c;
+  padding-bottom: 5px;
+}
+
+.ecoai-myattendance-present-past-success-container-inner-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4f99bc;
+}
+
+.ecoai-myattendance-present-past-success-container-time-loading-cont {
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+
+.ecoai-myattendance-present-past-success-container-inner-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #bdbbbb;
+}
+
+.ecoai-attendance-present-past-success-span {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: green;
+  text-shadow: 0 0 6px rgba(46, 125, 50, 0.6);
+  animation: blinking 0.4s infinite alternate;
+}
+
+@keyframes blinking {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.ecoai-myattendance-present-success-btns-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ecoai-myattendance-present-success-logout-btn {
+  padding: 8px;
+  width: 60px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 12px;
+  background-color: #f44336;
+  color: #ffffff;
+}
+
+.ecoai-myattendance-present-success-logout-btn:disabled {
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.ecoai-myattendance-modal {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.ecoai-myattendance-modal-loc-succ-msg {
+  color: green;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 0;
+  animation: popping 0.8s infinite alternate;
+}
+
+.ecoai-myattendance-modal-heading {
+  font-size: 16px;
+  text-align: center;
+}
+
+.ecoai-myattendance-model-btns-container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ecoai-myattendance-model-btn {
+  width: 80px;
+  font-family: "Roboto";
+  font-size: 14px;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+
+.login-yes-btn {
+  background-color: green;
+  color: #ffffff;
+}
+
+.login-no-btn {
+  background-color: grey;
+}
+
+.logout-no-btn {
+  background-color: green;
+  color: #ffffff;
+}
+
+.logout-yes-btn {
+  background-color: grey;
+}
+
+.ecoai-myattendance-success-btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-size: 12px;
+}
+
+.myattendance-btn-break-out {
+  width: 110px;
+  background-color: rgb(178, 178, 27);
+  color: white;
+  margin-right: 15px;
+}
+
+.myattendance-grey {
+  background-color: gray;
+}
+
+.myattendance-green {
+  background-color: green;
+  color: white;
+}
+
+.ecoai-myattendance-present-past-success-container-worked-duration {
+  padding: 8px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  border: 1px solid #bdbbbb;
+}
+
+.ecoai-myattendance-alert-text {
+  color: #f44336;
+  font-size: 14px;
+  padding-top: 5px;
+  cursor: pointer;
+  animation: popping 1s infinite alternate;
+}
+
+@keyframes popping {
+  from {
+    transform: scale(0.95);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.ecoai-myattendance-alert-text:hover {
+  font-weight: bold;
+  color: #4f99bc;
+}
+
+.ecoai-myattendance-modal-logout-color {
+  color: #4f99bc;
+  font-weight: 500;
+}
+
+@media (max-width: 1000px) {
+  .ecoai-myattendance-present-past-success-tasks-list-container::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .ecoai-myattendance-bg-container {
+    width: 100%;
+    height: 90dvh;
+    position: relative;
+    padding-bottom: 85px;
+  }
+
+  .ecoai-myattendance-right-container {
+    width: 100%;
+    padding: 20px;
+    overflow: auto;
+  }
+
+  .ecoai-myattendance-loading-failed-view-container {
+    width: 100%;
+    height: 50vh;
+    font-size: 16px;
+  }
+
+  .ecoai-myattendance-present-past-future-view-container {
+    padding: 0px;
+  }
+
+  .ecoai-myattendance-present-past-future-view-date {
+    font-size: 12px;
+  }
+
+  .ecoai-myattendance-present-past-future-view-name {
+    font-size: 24px;
+  }
+
+  .ecoai-myattendance-present-past-future-view-role {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+
+  .ecoai-myattendance-future-cannot-mark-text {
+    margin: 10px;
+    font-size: 14px;
+    gap: 3px;
+  }
+
+  .ecoai-myattendance-future-cannot-mark-icon {
+    font-size: 18px;
+  }
+
+  .ecoai-myattendance-present-view-btns-container {
+    gap: 10px;
+  }
+
+  .ecoai-myattendance-present-view-btn {
+    padding: 10px 18px;
+  }
+
+  .ecoai-myattendance-present-view-heading {
+    font-size: 20px;
+  }
+
+  .ecoai-myattendance-present-view-verify-location-btn-verified {
+    width: 170px;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .ecoai-myattendance-present-view-location-icon {
+    font-size: 18px;
+  }
+
+  .ecoai-myattendance-present-past-success-main-container {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .ecoai-myattendance-present-past-success-container {
+    width: 100%;
+    border-radius: 5px;
+    padding: 8px 10px;
+    gap: 10px;
+    padding-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  .ecoai-myattendance-present-past-success-tasks-container {
+    width: 100%;
+    border-radius: 5px;
+    padding: 8px 10px;
+    gap: 10px;
+  }
+
+  .ecoai-myattendance-present-past-success-tasks-heading {
+    font-size: 17px;
+  }
+
+  .ecoai-myattendance-present-past-success-tasks-empty-container {
+    font-size: 12px;
+  }
+
+  .ecoai-myattendance-present-past-success-tasks-list {
+    font-size: 14px;
+    padding: 10px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+  }
+
+  .ecoai-myattendance-present-past-success-tasks-item {
+    padding: 8px;
+  }
+
+  .ecoai-myattendance-present-past-success-container-inner-cont {
+    padding-top: 0;
+    padding-bottom: 0px;
+  }
+
+  .ecoai-myattendance-present-past-success-container-inner-label {
+    font-size: 13px;
+  }
+
+  .ecoai-myattendance-present-past-success-container-inner-text {
+    font-size: 12px;
+  }
+
+  .ecoai-attendance-present-past-success-span {
+    right: 5px;
+    top: 5px;
+    font-size: 9px;
+  }
+
+  .ecoai-myattendance-present-past-success-container-worked-duration {
+    padding: 6px 8px;
+    font-size: 10px;
+  }
+}

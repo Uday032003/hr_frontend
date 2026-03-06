@@ -1,0 +1,261 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  background-color: rgb(20, 20, 20) !important;
+  -webkit-box-shadow: 0 0 0 1000px rgb(20, 20, 20) inset !important;
+  -webkit-text-fill-color: rgb(139, 137, 137) !important;
+  caret-color: rgb(139, 137, 137);
+}
+
+::-webkit-autofill-previewed,
+::-webkit-autofill-selected {
+  -webkit-text-fill-color: rgb(139, 137, 137) !important;
+}
+
+.ecoai-verify-bg-container {
+  background-color: rgb(20, 20, 20);
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto";
+  position: relative;
+  overflow: hidden;
+}
+
+.ecoai-verify-info-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+  height: 50vh;
+  border: 2px solid rgb(43, 42, 42);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.ecoai-verify-info-container {
+  background-image: url("https://res.cloudinary.com/dnxaaxcjv/image/upload/v1762678292/LoginBg3_n3ye66.png");
+  background-size: cover;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+
+.ecoai-verify-logo {
+  width: 150px;
+  margin-top: -40px;
+}
+
+.ecoai-verify-info-matter-container {
+  text-align: center;
+  width: 90%;
+  padding: 25px;
+}
+
+.ecoai-verify-info-matter1 {
+  font-weight: bold;
+  font-size: 28px;
+  color: #bdbbbb;
+}
+
+.ecoai-verify-info-matter2 {
+  font-size: 15px;
+  color: rgb(139, 137, 137);
+}
+
+.ecoai-verify-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  padding: 20px;
+  padding-top: 5px;
+  backdrop-filter: blur(10px);
+}
+
+.ecoai-verify-heading {
+  font-size: 28px;
+  color: #bdbbbb;
+  margin-bottom: 30px;
+}
+
+.ecoai-verify-success-msg {
+  color: rgb(139, 137, 137);
+  text-align: center;
+}
+
+.ecoai-verify-email-container {
+  position: relative;
+  margin-bottom: 3px;
+  width: 80%;
+  border-bottom: 2px solid rgb(139, 137, 137);
+}
+
+.ecoai-verify-email-inp {
+  width: 90%;
+  padding-top: 18px;
+  font-size: 14px;
+  outline: none;
+  background: transparent;
+  border: none;
+  color: rgb(139, 137, 137);
+  padding-bottom: 3px;
+}
+
+.ecoai-verify-email-label {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  color: rgb(139, 137, 137);
+  font-size: 14px;
+  transition: 0.2s ease all;
+  pointer-events: none;
+  letter-spacing: 1px;
+}
+
+.ecoai-verify-email-inp:focus + .ecoai-verify-email-label,
+.ecoai-verify-email-inp:not(:placeholder-shown) + .ecoai-verify-email-label {
+  top: -4px;
+  left: 0px;
+  font-size: 11px;
+  color: rgb(212, 208, 208);
+}
+
+.ecoai-verify-error-msg-container {
+  height: 40px;
+  position: relative;
+  width: 80%;
+}
+
+.ecoai-verify-error-msg {
+  color: orange;
+  font-size: 12px;
+  width: 100%;
+  position: absolute;
+}
+
+.ecoai-verify-button {
+  width: 80%;
+  background-color: #bdbbbb;
+  color: rgb(26, 26, 26);
+  padding: 12px;
+  border: none;
+  border-radius: 3px;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.ecoai-verify-no-account-text {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: rgb(139, 137, 137);
+}
+
+.ecoai-verify-login-text {
+  cursor: pointer;
+}
+
+.ecoai-verify-login-text:hover {
+  text-decoration: underline;
+  color: #4f99bc;
+}
+
+.fade-out {
+  opacity: 0;
+  transform: scale(0.95);
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .ecoai-verify-logo {
+    width: 110px;
+  }
+
+  .ecoai-verify-info-matter-container {
+    padding: 15px;
+  }
+
+  .ecoai-verify-info-matter1 {
+    font-size: 18px;
+  }
+
+  .ecoai-verify-info-matter2 {
+    font-size: 11px;
+  }
+
+  .ecoai-verify-form-container {
+    padding: 15px;
+  }
+
+  .ecoai-verify-heading {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .ecoai-verify-success-msg {
+    color: rgb(139, 137, 137);
+    text-align: center;
+  }
+
+  .ecoai-verify-email-container {
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(139, 137, 137);
+  }
+
+  .ecoai-verify-email-inp {
+    padding-top: 16px;
+    font-size: 12px;
+    padding-bottom: 2px;
+  }
+
+  .ecoai-verify-email-label {
+    top: 16px;
+    font-size: 11px;
+  }
+
+  .ecoai-verify-email-inp:focus + .ecoai-verify-email-label,
+  .ecoai-verify-email-inp:not(:placeholder-shown) + .ecoai-verify-email-label {
+    top: 2px;
+    font-size: 9px;
+  }
+
+  .ecoai-verify-error-msg-container {
+    margin-top: 3px;
+    height: 30px;
+  }
+
+  .ecoai-verify-error-msg {
+    font-size: 9px;
+  }
+
+  .ecoai-verify-button {
+    padding: 9px;
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+
+  .ecoai-verify-no-account-text {
+    font-size: 10px;
+  }
+}

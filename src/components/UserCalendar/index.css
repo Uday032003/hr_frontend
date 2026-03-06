@@ -1,0 +1,596 @@
+.ecoai-user-calendar-right-container::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.ecoai-user-calendar-bg-container {
+  background-color: rgb(23, 23, 23);
+  background-size: cover;
+  width: 100%;
+  height: 88vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto";
+}
+
+.ecoai-user-calendar-right-container {
+  width: 82%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 30px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.ecoai-user-calendar-heading {
+  font-size: 30px;
+  color: #bdbbbb;
+}
+
+.ecoai-user-calendar-calendar-section {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0px 20px;
+}
+
+.ecoai-username-calendar-container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.ecoai-user-calendar-month-year-selectors-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.ecoai-user-calendar-month-selector,
+.ecoai-user-calendar-year-selector {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 2px solid rgb(43, 42, 42);
+  background-color: transparent;
+  color: #bdbbbb;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-size: 15px;
+  outline: none;
+  margin-left: 10px;
+}
+
+.ecoai-user-calendar-select-option {
+  padding: 8px 12px;
+  border: 1px solid rgb(43, 42, 42);
+  background-color: rgb(23, 23, 23);
+  color: #bdbbbb;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-size: 15px;
+  outline: none;
+}
+
+.ecoai-user-calendar-select-option:checked {
+  color: #4f99bc;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.react-calendar {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  border: 2px solid rgb(43, 42, 42);
+}
+
+.react-calendar__navigation {
+  background: transparent;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.react-calendar__navigation__prev-button,
+.react-calendar__navigation__next-button {
+  color: #bdbbbb;
+  font-size: 20px;
+  background-color: transparent !important;
+}
+
+.react-calendar__navigation__prev-button,
+.react-calendar__navigation__next-button:hover {
+  background: transparent !important;
+}
+
+.react-calendar__navigation__label {
+  font-size: 18px;
+  font-weight: 600;
+  background-color: transparent !important;
+  color: #bdbbbb;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  color: #4f99bc;
+  font-weight: 600;
+  text-decoration: underline;
+  margin-bottom: 12px;
+}
+
+.react-calendar__tile {
+  border-radius: 10px;
+  background: transparent;
+  color: #bdbbbb;
+  font-weight: 500;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+}
+
+.react-calendar__tile:hover {
+  border: 2px solid #bdbbbb !important;
+}
+
+.react-calendar__tile--active {
+  background: #bdbbbb !important;
+  color: #171717 !important;
+  border: 2px solid #bdbbbb !important;
+}
+
+.react-calendar__tile--now {
+  background: #4f99bc;
+  border: 2px solid #bdbbbb;
+  border-radius: 10px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.react-calendar__tile:enabled:hover {
+  background: transparent !important;
+}
+
+.react-calendar__tile--active:enabled:hover {
+  background: #bdbbbb !important;
+  border: 2px solid #bdbbbb;
+}
+
+.react-calendar__tile--now:enabled:hover {
+  background: #4f99bc !important;
+  border: 2px solid #bdbbbb !important;
+}
+
+.react-calendar__tile--now.react-calendar__tile--active {
+  background: #4f99bc !important;
+  color: #ffffff !important;
+  border: 2px solid #bdbbbb !important;
+}
+
+.green-date {
+  background: #4fbc53 !important;
+  color: #ffffff !important;
+  border-radius: 10px;
+}
+
+.red-date {
+  background: #b94040 !important;
+  color: #ffffff !important;
+  border-radius: 10px;
+}
+
+.red-date:enabled:hover {
+  background: #b94040 !important;
+  border: 2px solid #bdbbbb;
+}
+
+.green-date:enabled:hover {
+  background: #4fbc53 !important;
+  border: 1px solid #bdbbbb;
+}
+
+/* .ecoai-user-calendar-button {
+  background-color: transparent;
+  color: #bdbbbb;
+  border: 1px solid #bdbbbb;
+  border-radius: 5px;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  transition: all 0.3s ease;
+  width: 120px;
+  height: 60px;
+}
+
+.ecoai-user-calendar-button:hover {
+  text-shadow: 0 0 5px #4f99bc;
+  transform: skew(-1deg) scale(0.98);
+}
+
+.ecoai-user-calendar-selected-date-text {
+  margin-top: 5px;
+  color: #4f99bc;
+  font-size: 14px;
+  animation: poppingDate 0.3s ease-in-out infinite alternate-reverse;
+}
+@keyframes poppingDate {
+  0% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+} */
+
+.ecoai-user-calendar-tiles-container {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 2px solid rgb(43, 42, 42);
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.ecoai-user-calendar-tile-container {
+  width: 25%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.ecoai-user-calendar-tile {
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.ecoai-admin-today-tile-color {
+  background-color: #4f99bc;
+  color: #bdbbbb;
+}
+
+.ecoai-admin-selected-tile-color {
+  background-color: #bdbbbb;
+}
+
+.ecoai-admin-absent-tile-color {
+  background-color: #b94040;
+  color: #bdbbbb;
+}
+
+.ecoai-admin-present-wfo-tile-color {
+  background-color: green;
+  color: #bdbbbb;
+}
+
+.ecoai-admin-present-wfh-tile-color {
+  background-color: purple;
+  color: #bdbbbb;
+}
+
+.ecoai-admin-present-wfo-late-tile-color {
+  background: linear-gradient(to left, green 70%, orange);
+  color: #bdbbbb;
+}
+
+.ecoai-admin-present-wfo-less-tile-color {
+  background: linear-gradient(to right, green 70%, orange);
+  color: #bdbbbb;
+}
+
+.ecoai-admin-present-wfo-late-less-tile-color {
+  background: radial-gradient(green, orange);
+  color: #bdbbbb;
+}
+
+.ecoai-admin-present-wfh-late-tile-color {
+  background: linear-gradient(to left, purple 70%, orange);
+  color: #bdbbbb;
+}
+
+.ecoai-admin-present-wfh-less-tile-color {
+  background: linear-gradient(to right, purple 70%, orange);
+  color: #bdbbbb;
+}
+
+.ecoai-admin-present-wfh-late-less-tile-color {
+  background: radial-gradient(purple, orange);
+  color: #bdbbbb;
+}
+
+.ecoai-admin-present-wfo-late-tile-text {
+  color: green;
+  font-size: 12px;
+}
+
+.ecoai-admin-present-wfo-less-tile-text {
+  color: green;
+  font-size: 12px;
+}
+
+.ecoai-admin-present-wfo-late-less-tile-text {
+  color: orange;
+  font-size: 12px;
+}
+
+.ecoai-admin-present-wfh-late-tile-text {
+  color: purple;
+  font-size: 12px;
+}
+
+.ecoai-admin-present-wfh-less-tile-text {
+  color: purple;
+  font-size: 12px;
+}
+
+.ecoai-admin-present-wfh-late-less-tile-text {
+  color: orange;
+  font-size: 12px;
+}
+
+.ecoai-admin-today-tile-text {
+  color: #4f99bc;
+  font-size: 12px;
+}
+
+.ecoai-admin-selected-tile-text {
+  color: #bdbbbb;
+  font-size: 12px;
+}
+
+.ecoai-admin-present-wfo-tile-text {
+  color: #4fbc53;
+  font-size: 12px;
+}
+
+.ecoai-admin-present-wfh-tile-text {
+  color: purple;
+  font-size: 12px;
+}
+
+.ecoai-admin-absent-tile-text {
+  color: #b94040;
+  font-size: 12px;
+}
+
+.ecoai-user-calendar-loading-view-container {
+  width: 80%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.fade-out {
+  opacity: 0;
+  transform: scale(0.95);
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.ecoai-user-calendar-back-icon-container {
+  position: absolute;
+  align-self: flex-start;
+  color: #bdbbbb;
+  font-size: 18px;
+  top: 20px;
+  left: 35px;
+  cursor: pointer;
+  background-color: transparent;
+  font-family: "Roboto";
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ecoai-user-calendar-back-icon {
+  font-size: 20px;
+}
+
+.ecoai-user-calendar-back-icon-container:hover {
+  color: #4f99bc;
+  transform: scale(0.9);
+}
+
+@media (max-width: 1000px) {
+  .ecoai-user-calendar-bg-container {
+    width: 100%;
+    height: 90dvh;
+    position: relative;
+    padding-bottom: 85px;
+  }
+
+  .ecoai-user-calendar-right-container {
+    width: 100%;
+    padding: 20px;
+    overflow: auto;
+  }
+
+  .ecoai-user-calendar-heading {
+    font-size: 24px;
+  }
+
+  .ecoai-user-calendar-calendar-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+  }
+
+  .ecoai-username-calendar-container {
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  .ecoai-user-calendar-month-year-selectors-container {
+    margin-bottom: 10px;
+  }
+
+  .ecoai-user-calendar-month-selector,
+  .ecoai-user-calendar-year-selector {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 13px;
+  }
+
+  .ecoai-user-calendar-select-option {
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+
+  .react-calendar {
+    border-radius: 8px !important;
+    padding: 5px !important;
+  }
+
+  .react-calendar__navigation {
+    margin-bottom: 0 !important;
+  }
+
+  .react-calendar__navigation__prev-button,
+  .react-calendar__navigation__next-button {
+    font-size: 15px !important;
+  }
+
+  .react-calendar__navigation__label {
+    font-size: 15px !important;
+  }
+
+  .react-calendar__month-view__weekdays__weekday {
+    margin-bottom: 3px !important;
+    font-size: 11px !important;
+  }
+
+  .react-calendar__tile {
+    padding: 10px 0 !important;
+    border-radius: 8px !important;
+    font-size: 12px !important;
+  }
+
+  .react-calendar__tile--now {
+    border-radius: 8px !important;
+  }
+
+  .green-date {
+    border-radius: 8px !important;
+  }
+
+  .red-date {
+    border-radius: 8px !important;
+  }
+
+  .purple-date {
+    border-radius: 8px !important;
+  }
+
+  .orange-green-date {
+    border-radius: 8px !important;
+  }
+
+  .green-orange-date {
+    border-radius: 8px !important;
+  }
+
+  .orange-purple-date {
+    border-radius: 8px !important;
+  }
+
+  .purple-orange-date {
+    border-radius: 8px !important;
+  }
+
+  .orange-green-orange-date {
+    border-radius: 8px !important;
+  }
+
+  .orange-purple-orange-date {
+    border-radius: 8px !important;
+  }
+
+  .ecoai-user-calendar-tiles-container {
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .ecoai-user-calendar-tile-container {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 7px;
+  }
+
+  .ecoai-user-calendar-tile {
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    font-size: 8px;
+  }
+
+  .ecoai-user-calendar-loading-view-container {
+    width: 100%;
+    height: 50vh;
+    margin-right: 0px;
+  }
+
+  .ecoai-user-calendar-back-icon-container {
+    font-size: 15px;
+    top: 10px;
+    left: 20px;
+    gap: 3px;
+  }
+
+  .ecoai-user-calendar-back-icon {
+    font-size: 18px;
+  }
+}

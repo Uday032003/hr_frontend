@@ -1,0 +1,46 @@
+.ecoai-profile-incomplete-banner {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: transparent;
+  color: #bdbbbb;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #4f99bc;
+  border-left: 6px solid #4f99bc;
+  border-radius: 5px;
+  width: 60%;
+}
+
+.ecoai-profile-incomplete-banner span {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.ecoai-update-profile-btn {
+  background-color: #4f99bc;
+  color: #ffffff;
+  border: none;
+  padding: 6px 14px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-family: "Roboto";
+}
+
+.ecoai-update-profile-btn:hover {
+  background-color: #5196b6;
+}
+
+@media (max-width: 1000px) {
+  .ecoai-profile-incomplete-banner {
+    width: 90%;
+  }
+
+  .ecoai-profile-incomplete-banner span {
+    font-size: 13px;
+  }
+}

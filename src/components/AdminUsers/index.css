@@ -1,0 +1,571 @@
+.ecoai-admin-users-right-container::-webkit-scrollbar {
+  display: none;
+}
+
+.ecoai-admin-users-list-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.ecoai-admin-users-list-container::-webkit-scrollbar:horizontal {
+  display: none;
+}
+
+.ecoai-admin-users-list-container::-webkit-scrollbar-track {
+  background: #1e1e1e;
+  border-radius: 3px;
+}
+
+.ReactModal__Overlay {
+  z-index: 9999;
+}
+
+.ecoai-admin-users-list-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #4f99bc, #4f99bc);
+  border-radius: 3px;
+}
+
+.ecoai-admin-users-bg-container {
+  background-color: rgb(23, 23, 23);
+  background-size: cover;
+  width: 100%;
+  height: 88vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto";
+  color: #bdbbbb;
+}
+
+.ecoai-admin-users-right-container {
+  width: 82%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 30px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.ecoai-admin-users-container {
+  width: 100%;
+  position: relative;
+}
+
+.ecoai-admin-users-add-new-employee-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Roboto";
+  font-size: 13px;
+  background-color: #4f99bc;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.ecoai-admin-users-modal-form {
+  width: 420px;
+  z-index: 15;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.ecoai-admin-users-modal-close-icon-btn {
+  position: absolute;
+  right: 5px;
+  top: 11px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.ecoai-admin-users-modal-close-icon {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.ecoai-admin-users-modal-heading {
+  font-size: 20px;
+  padding-top: 15px;
+}
+
+.ecoai-admin-users-modal-inps-select-container {
+  width: 100%;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+.ecoai-admin-users-modal-name-container {
+  position: relative;
+  margin-bottom: 23px;
+  width: 70%;
+  border-bottom: 1px solid rgb(139, 137, 137);
+}
+
+.ecoai-admin-users-modal-name-inp {
+  width: 90%;
+  padding-top: 18px;
+  font-size: 14px;
+  outline: none;
+  background: transparent;
+  border: none;
+  color: rgb(139, 137, 137);
+  padding-bottom: 3px;
+}
+
+.ecoai-admin-users-modal-name-label {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  color: rgb(139, 137, 137);
+  font-size: 14px;
+  transition: 0.2s ease all;
+  pointer-events: none;
+  letter-spacing: 1px;
+}
+
+.ecoai-admin-users-modal-name-inp:focus + .ecoai-admin-users-modal-name-label,
+.ecoai-admin-users-modal-name-inp:not(:placeholder-shown)
+  + .ecoai-admin-users-modal-name-label {
+  top: -4px;
+  left: 0px;
+  font-size: 11px;
+  color: rgb(212, 208, 208);
+}
+
+.ecoai-admin-users-modal-email-container {
+  position: relative;
+  margin-bottom: 23px;
+  width: 70%;
+  border-bottom: 1px solid rgb(139, 137, 137);
+}
+
+.ecoai-admin-users-modal-email-inp {
+  width: 90%;
+  padding-top: 18px;
+  font-size: 14px;
+  outline: none;
+  background: transparent;
+  border: none;
+  color: rgb(139, 137, 137);
+  padding-bottom: 3px;
+}
+
+.ecoai-admin-users-modal-email-label {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  color: rgb(139, 137, 137);
+  font-size: 14px;
+  transition: 0.2s ease all;
+  pointer-events: none;
+  letter-spacing: 1px;
+}
+
+.ecoai-admin-users-modal-email-inp:focus + .ecoai-admin-users-modal-email-label,
+.ecoai-admin-users-modal-email-inp:not(:placeholder-shown)
+  + .ecoai-admin-users-modal-email-label {
+  top: -4px;
+  left: 0px;
+  font-size: 11px;
+  color: rgb(212, 208, 208);
+}
+
+.ecoai-admin-users-modal-password-container {
+  position: relative;
+  margin-bottom: 23px;
+  width: 70%;
+  border-bottom: 1px solid rgb(139, 137, 137);
+}
+
+.ecoai-admin-users-modal-password-inp {
+  width: 90%;
+  padding-top: 18px;
+  font-size: 14px;
+  outline: none;
+  background: transparent;
+  border: none;
+  color: rgb(139, 137, 137);
+  padding-bottom: 3px;
+}
+
+.ecoai-admin-users-modal-password-label {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  color: rgb(139, 137, 137);
+  font-size: 14px;
+  transition: 0.2s ease all;
+  pointer-events: none;
+  letter-spacing: 1px;
+}
+
+.ecoai-admin-users-modal-password-inp:focus
+  + .ecoai-admin-users-modal-password-label,
+.ecoai-admin-users-modal-password-inp:not(:placeholder-shown)
+  + .ecoai-admin-users-modal-password-label {
+  top: -4px;
+  left: 0px;
+  font-size: 11px;
+  color: rgb(212, 208, 208);
+}
+
+.ecoai-admin-users-modal-select-add-btn-container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.ecoai-admin-users-modal-select-container {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgb(43, 42, 42);
+  background-color: transparent;
+  color: #bdbbbb;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-size: 15px;
+  outline: none;
+  margin-left: 10px;
+}
+
+.ecoai-admin-users-modal-select-option {
+  padding: 8px 12px;
+  border: 1px solid rgb(43, 42, 42);
+  background-color: rgb(23, 23, 23);
+  color: #bdbbbb;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-size: 15px;
+  outline: none;
+}
+
+.ecoai-admin-users-modal-select-option:checked {
+  color: #4f99bc;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.ecoai-admin-users-modal-add-btn {
+  width: 50%;
+  align-self: flex-end;
+  padding: 12px;
+  cursor: pointer;
+  background-color: #4f99bc;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-family: "Roboto";
+  font-weight: 500;
+}
+
+.ecoai-admin-users-list-container {
+  width: 90%;
+  max-height: 70vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 2px solid rgb(43, 42, 42);
+  border-radius: 5px;
+  background-color: rgb(18, 18, 18);
+}
+
+.ecoai-admin-users-list {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.ecoai-admin-users-heading-item {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: rgb(14, 14, 14);
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid rgb(43, 42, 42);
+  padding-left: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.ecoai-admin-users-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgb(43, 42, 42);
+  padding-left: 35px;
+  cursor: pointer;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.ecoai-admin-users-item:hover {
+  transform: scale(1.01);
+}
+
+.ecoai-admin-users-name {
+  width: 20%;
+  font-size: 13px;
+}
+
+.ecoai-admin-users-username {
+  width: 20%;
+  font-size: 13px;
+}
+
+.ecoai-admin-users-email {
+  width: 30%;
+  font-size: 13px;
+}
+
+.ecoai-admin-users-job-type {
+  width: 15%;
+  font-size: 13px;
+}
+
+.ecoai-admin-users-created-time {
+  width: 15%;
+  font-size: 14px;
+}
+
+.ecoai-admin-users-sorting-btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  color: #4f99bc;
+  padding-left: 0;
+  margin-left: 0;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 15px;
+}
+
+.ecoai-admin-users-icon {
+  color: #bdbbbb;
+}
+
+.up-icon {
+  position: relative;
+  top: 3px;
+}
+
+.down-icon {
+  position: relative;
+  bottom: 3px;
+}
+
+.ecoai-admin-users-loading-view-container {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ecoai-admin-users-failure-view-container {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ecoai-admin-users-not-found-view-container {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1000px) {
+  .ecoai-admin-users-list-container::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .ecoai-admin-users-list-container::-webkit-scrollbar:horizontal {
+    display: flex;
+    height: 2px;
+  }
+
+  .ecoai-admin-users-bg-container {
+    height: 90dvh;
+    position: relative;
+    padding-bottom: 85px;
+  }
+
+  .ecoai-admin-users-right-container {
+    width: 100%;
+    padding: 15px;
+    overflow: auto;
+  }
+
+  .ecoai-admin-users-heading {
+    font-size: 24px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+  }
+
+  .ecoai-admin-users-add-new-employee-btn {
+    top: 0px;
+    right: 10px;
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+
+  .ecoai-admin-users-modal-form {
+    width: 250px;
+  }
+
+  .ecoai-admin-users-modal-heading {
+    font-size: 17px;
+    padding-top: 5px;
+    margin-bottom: 18px;
+  }
+
+  .ecoai-admin-users-modal-inps-select-container {
+    padding-left: 8px;
+    padding-bottom: 3px;
+  }
+
+  .ecoai-admin-users-modal-name-container {
+    margin-bottom: 15px;
+    width: 80%;
+  }
+
+  .ecoai-admin-users-modal-name-inp {
+    padding-top: 14px;
+  }
+
+  .ecoai-admin-users-modal-email-container {
+    margin-bottom: 15px;
+    width: 80%;
+  }
+
+  .ecoai-admin-users-modal-email-inp {
+    padding-top: 14px;
+  }
+
+  .ecoai-admin-users-modal-password-container {
+    margin-bottom: 15px;
+    width: 80%;
+  }
+
+  .ecoai-admin-users-modal-password-inp {
+    padding-top: 14px;
+  }
+
+  .ecoai-admin-users-modal-select-add-btn-container {
+    margin-top: 20px;
+  }
+
+  .ecoai-admin-users-modal-select-container {
+    padding: 6px 8px;
+    border-radius: 5px;
+    font-size: 13px;
+  }
+
+  .ecoai-admin-users-modal-select-option {
+    padding: 6px 8px;
+    font-size: 13px;
+  }
+
+  .ecoai-admin-users-modal-select-option:checked {
+    font-size: 14px;
+  }
+
+  .ecoai-admin-users-modal-add-btn {
+    width: 40%;
+  }
+
+  .ecoai-admin-users-list-container {
+    width: 100%;
+    max-height: 100dvh;
+    overflow-x: auto;
+  }
+
+  .ecoai-admin-users-list {
+    width: 200%;
+  }
+
+  .ecoai-admin-users-heading-item {
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .ecoai-admin-users-item {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 17px;
+  }
+
+  .ecoai-admin-users-name {
+    width: 17%;
+  }
+
+  .ecoai-admin-users-username {
+    width: 20%;
+  }
+
+  .ecoai-admin-users-email {
+    width: 34%;
+  }
+
+  .ecoai-admin-users-job-type {
+    width: 15%;
+  }
+
+  .ecoai-admin-users-created-time {
+    width: 14%;
+    font-size: 12px;
+  }
+
+  .ecoai-admin-users-sorting-btn {
+    font-size: 13px;
+  }
+
+  .ecoai-admin-users-icon {
+    font-size: 10px;
+  }
+
+  .up-icon {
+    position: relative;
+    top: 3px;
+    font-size: 10px;
+  }
+
+  .down-icon {
+    position: relative;
+    bottom: 3px;
+    font-size: 10px;
+  }
+
+  .ecoai-admin-users-loading-view-container {
+    width: 90px;
+    justify-content: center;
+  }
+
+  .ecoai-admin-users-failure-view-container {
+    justify-content: center;
+    width: 200px;
+  }
+
+  .ecoai-admin-users-not-found-view-container {
+    justify-content: center;
+    width: 200px;
+  }
+}

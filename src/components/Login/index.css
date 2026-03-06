@@ -1,0 +1,689 @@
+.ecoai-login-info-form-container::-webkit-scrollbar {
+  display: none;
+}
+
+.ecoai-login-bg-container {
+  background-color: rgb(20, 20, 20);
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto";
+}
+
+.ecoai-login-info-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+  height: 45vh;
+  border: 2px solid rgb(43, 42, 42);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.ecoai-login-info-container {
+  background: none;
+  position: relative;
+  background-size: cover;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ecoai-login-info-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://res.cloudinary.com/dnxaaxcjv/image/upload/v1762500529/LoginBg4_o7lwtw.png");
+  background-size: cover;
+  background-position: center -10px;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.ecoai-login-info-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+.ecoai-login-info-swipe-container {
+  display: none;
+}
+
+.ecoai-login-logo {
+  width: 150px;
+  margin-top: -40px;
+}
+
+.ecoai-login-info-matter-container {
+  text-align: center;
+  width: 90%;
+  padding: 25px;
+}
+
+.ecoai-login-info-matter1 {
+  font-weight: bold;
+  font-size: 28px;
+  color: #bdbbbb;
+}
+
+.ecoai-login-info-matter2 {
+  font-size: 15px;
+  color: rgb(139, 137, 137);
+}
+
+.ecoai-login-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  padding: 20px;
+  padding-top: 5px;
+  backdrop-filter: blur(2px);
+}
+
+.ecoai-login-heading {
+  font-size: 28px;
+  color: #bdbbbb;
+  margin-bottom: 30px;
+}
+
+.ecoai-login-email-container {
+  position: relative;
+  margin-bottom: 23px;
+  width: 80%;
+  border-bottom: 2px solid rgb(139, 137, 137);
+}
+
+.ecoai-login-email-inp {
+  width: 90%;
+  padding-top: 18px;
+  font-size: 14px;
+  outline: none;
+  background: transparent;
+  border: none;
+  color: rgb(139, 137, 137);
+  padding-bottom: 3px;
+}
+
+.ecoai-login-email-label {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  color: rgb(139, 137, 137);
+  font-size: 14px;
+  transition: 0.2s ease all;
+  pointer-events: none;
+  letter-spacing: 1px;
+}
+
+.ecoai-login-email-inp:focus + .ecoai-login-email-label,
+.ecoai-login-email-inp:not(:placeholder-shown) + .ecoai-login-email-label {
+  top: -4px;
+  left: 0px;
+  font-size: 11px;
+  color: rgb(212, 208, 208);
+}
+
+.ecoai-login-password-container {
+  position: relative;
+  width: 80%;
+  border-bottom: 2px solid rgb(139, 137, 137);
+  display: flex;
+  justify-content: space-between;
+}
+
+.ecoai-login-password-inp {
+  width: 90%;
+  padding-top: 18px;
+  font-size: 14px;
+  outline: none;
+  background: transparent;
+  border: none;
+  color: rgb(139, 137, 137);
+  padding-bottom: 3px;
+}
+
+.ecoai-login-password-label {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  color: rgb(139, 137, 137);
+  font-size: 14px;
+  transition: 0.2s ease all;
+  pointer-events: none;
+  letter-spacing: 1px;
+}
+
+.ecoai-login-password-inp:focus + .ecoai-login-password-label,
+.ecoai-login-password-inp:not(:placeholder-shown)
+  + .ecoai-login-password-label {
+  top: -4px;
+  left: 0px;
+  font-size: 11px;
+  color: rgb(212, 208, 208);
+}
+
+.ecoai-login-show-or-hide-button {
+  border: none;
+  background-color: transparent;
+  color: #4f99bc;
+  font-family: "Roboto";
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  margin-right: 5px;
+  position: relative;
+  top: 8px;
+}
+.ecoai-login-show-or-hide-button:active {
+  font-size: 11px;
+  top: 8px;
+}
+
+.ecoai-login-error-msg-container {
+  height: 10px;
+  position: relative;
+  width: 80%;
+}
+
+.ecoai-login-error-msg {
+  color: orange;
+  font-size: 12px;
+  width: 100%;
+  position: absolute;
+  top: 5px;
+}
+
+.ecoai-login-forgot-password-container {
+  width: 80%;
+  padding-left: 15px;
+  margin-bottom: 25px;
+  margin-top: -10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ecoai-login-forgot-password-btn {
+  font-size: 14px;
+  color: rgb(139, 137, 137);
+  cursor: pointer;
+  letter-spacing: 1px;
+  background-color: transparent;
+  font-family: "Roboto";
+  border: none;
+  outline: none;
+  padding-top: 10px;
+}
+
+.ecoai-login-button {
+  width: 80%;
+  background-color: #bdbbbb;
+  color: rgb(26, 26, 26);
+  padding: 12px;
+  border: none;
+  border-radius: 3px;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.ecoai-login-no-account-text {
+  margin-top: -10px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: rgb(139, 137, 137);
+}
+
+.ecoai-login-register-text {
+  cursor: pointer;
+}
+
+.ecoai-login-register-text:hover {
+  text-decoration: underline;
+  color: #4f99bc;
+}
+
+.ecoai-login-verify-email-text {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: rgb(139, 137, 137);
+}
+
+.ecoai-login-verify-text {
+  cursor: pointer;
+}
+
+.ecoai-login-verify-text:hover {
+  text-decoration: underline;
+  color: #4f99bc;
+}
+
+.fade-out {
+  opacity: 0;
+  transform: scale(0.95);
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+@media (min-width: 1001px) and (max-width: 1500px) {
+  .ecoai-login-logo {
+    width: 110px;
+  }
+
+  .ecoai-login-info-matter-container {
+    padding: 15px;
+  }
+
+  .ecoai-login-info-matter1 {
+    font-size: 18px;
+  }
+
+  .ecoai-login-info-matter2 {
+    font-size: 11px;
+  }
+
+  .ecoai-login-form-container {
+    padding: 15px;
+  }
+
+  .ecoai-login-heading {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .ecoai-login-email-container {
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(139, 137, 137);
+  }
+
+  .ecoai-login-email-inp {
+    padding-top: 16px;
+    font-size: 12px;
+    padding-bottom: 2px;
+  }
+
+  .ecoai-login-email-label {
+    top: 16px;
+    font-size: 11px;
+  }
+
+  .ecoai-login-email-inp:focus + .ecoai-login-email-label,
+  .ecoai-login-email-inp:not(:placeholder-shown) + .ecoai-login-email-label {
+    top: 2px;
+    font-size: 9px;
+  }
+
+  .ecoai-login-password-container {
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgb(139, 137, 137);
+  }
+
+  .ecoai-login-password-inp {
+    padding-top: 16px;
+    font-size: 12px;
+    padding-bottom: 2px;
+  }
+
+  .ecoai-login-password-label {
+    top: 16px;
+    font-size: 11px;
+  }
+
+  .ecoai-login-password-inp:focus + .ecoai-login-password-label,
+  .ecoai-login-password-inp:not(:placeholder-shown)
+    + .ecoai-login-password-label {
+    top: 2px;
+    font-size: 9px;
+  }
+
+  .ecoai-login-show-or-hide-button {
+    font-size: 10px;
+    margin-right: 0;
+  }
+  .ecoai-login-show-or-hide-button:active {
+    font-size: 9px;
+    top: 8px;
+  }
+
+  .ecoai-login-error-msg-container {
+    height: 10px;
+  }
+
+  .ecoai-login-error-msg {
+    font-size: 9px;
+    top: -12px;
+  }
+
+  .ecoai-login-forgot-password-container {
+    margin-bottom: 15px;
+    margin-top: -20px;
+  }
+
+  .ecoai-login-forgot-password-btn {
+    font-size: 11px;
+    padding-top: 3px;
+  }
+
+  .ecoai-login-button {
+    padding: 9px;
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+
+  .ecoai-login-no-account-text {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 1000px) {
+  .ecoai-login-info-form-container {
+    width: 70vw;
+    height: 45vh;
+    max-width: 500px;
+  }
+
+  .ecoai-login-logo {
+    width: 110px;
+  }
+
+  .ecoai-login-info-matter-container {
+    padding: 15px;
+  }
+
+  .ecoai-login-info-matter1 {
+    font-size: 18px;
+  }
+
+  .ecoai-login-info-matter2 {
+    font-size: 11px;
+  }
+
+  .ecoai-login-form-container {
+    padding: 15px;
+  }
+
+  .ecoai-login-heading {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .ecoai-login-email-container {
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(139, 137, 137);
+  }
+
+  .ecoai-login-email-inp {
+    padding-top: 16px;
+    font-size: 12px;
+    padding-bottom: 2px;
+  }
+
+  .ecoai-login-email-label {
+    top: 16px;
+    font-size: 11px;
+  }
+
+  .ecoai-login-email-inp:focus + .ecoai-login-email-label,
+  .ecoai-login-email-inp:not(:placeholder-shown) + .ecoai-login-email-label {
+    top: 2px;
+    font-size: 9px;
+  }
+
+  .ecoai-login-password-container {
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgb(139, 137, 137);
+  }
+
+  .ecoai-login-password-inp {
+    padding-top: 16px;
+    font-size: 12px;
+    padding-bottom: 2px;
+  }
+
+  .ecoai-login-password-label {
+    top: 16px;
+    font-size: 11px;
+  }
+
+  .ecoai-login-password-inp:focus + .ecoai-login-password-label,
+  .ecoai-login-password-inp:not(:placeholder-shown)
+    + .ecoai-login-password-label {
+    top: 2px;
+    font-size: 9px;
+  }
+
+  .ecoai-login-show-or-hide-button {
+    font-size: 10px;
+    margin-right: 0;
+  }
+  .ecoai-login-show-or-hide-button:active {
+    font-size: 9px;
+    top: 8px;
+  }
+
+  .ecoai-login-error-msg-container {
+    height: 10px;
+  }
+
+  .ecoai-login-error-msg {
+    font-size: 9px;
+    top: -12px;
+  }
+
+  .ecoai-login-forgot-password-container {
+    margin-bottom: 15px;
+    margin-top: -20px;
+  }
+
+  .ecoai-login-forgot-password-btn {
+    font-size: 11px;
+    padding-top: 3px;
+  }
+
+  .ecoai-login-button {
+    padding: 9px;
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+
+  .ecoai-login-no-account-text {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .ecoai-login-info-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 90%;
+    min-width: 280px;
+    height: 350px;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+  }
+
+  .ecoai-login-info-container {
+    height: 350px;
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    scroll-snap-align: start;
+    position: relative;
+  }
+
+  .ecoai-login-info-container::before {
+    background-position: center -20px;
+  }
+
+  .ecoai-login-info-swipe-container {
+    display: block;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    color: #bdbbbb;
+    font-size: 20px;
+    animation: rotate 2s infinite;
+  }
+
+  @keyframes rotate {
+    0% {
+      opacity: 0;
+      transform: rotate(-90deg);
+    }
+    50% {
+      opacity: 0.6;
+      transform: rotate(0deg);
+    }
+    100% {
+      opacity: 0;
+      transform: rotate(0deg);
+    }
+  }
+
+  .ecoai-login-logo {
+    width: 100px;
+    display: block;
+    margin-top: -35px;
+  }
+
+  .ecoai-login-info-matter-container {
+    padding: 10px;
+    padding-bottom: 20px;
+  }
+
+  .ecoai-login-info-matter1 {
+    font-size: 20px;
+  }
+
+  .ecoai-login-info-matter2 {
+    font-size: 13px;
+  }
+
+  .ecoai-login-form-container {
+    height: 350px;
+    width: 100%;
+    flex-shrink: 0;
+    padding: 0;
+    scroll-snap-align: start;
+  }
+
+  .ecoai-login-form-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("https://res.cloudinary.com/dnxaaxcjv/image/upload/v1762500529/LoginBg4_o7lwtw.png");
+    background-size: cover;
+    background-position: center -40px;
+    opacity: 0.07;
+    z-index: 0;
+  }
+
+  .ecoai-login-form-container > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .ecoai-login-heading {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .ecoai-login-email-container {
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgb(139, 137, 137);
+  }
+
+  .ecoai-login-email-inp {
+    padding-top: 16px;
+    font-size: 14px;
+    padding-bottom: 2px;
+  }
+
+  .ecoai-login-email-label {
+    top: 14px;
+    font-size: 14px;
+  }
+
+  .ecoai-login-email-inp:focus + .ecoai-login-email-label,
+  .ecoai-login-email-inp:not(:placeholder-shown) + .ecoai-login-email-label {
+    top: 0px;
+    font-size: 11px;
+  }
+
+  .ecoai-login-password-container {
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgb(139, 137, 137);
+  }
+
+  .ecoai-login-password-inp {
+    padding-top: 16px;
+    font-size: 14px;
+    padding-bottom: 2px;
+  }
+
+  .ecoai-login-password-label {
+    top: 14px;
+    font-size: 14px;
+  }
+
+  .ecoai-login-password-inp:focus + .ecoai-login-password-label,
+  .ecoai-login-password-inp:not(:placeholder-shown)
+    + .ecoai-login-password-label {
+    top: 0px;
+    font-size: 11px;
+  }
+
+  .ecoai-login-show-or-hide-button {
+    font-size: 12px;
+  }
+  .ecoai-login-show-or-hide-button:active {
+    font-size: 11px;
+    top: 7px;
+  }
+
+  .ecoai-login-error-msg-container {
+    height: 10px;
+  }
+
+  .ecoai-login-error-msg {
+    font-size: 11px;
+    top: -14px;
+  }
+
+  .ecoai-login-forgot-password-container {
+    margin-bottom: 30px;
+    margin-top: -20px;
+  }
+
+  .ecoai-login-forgot-password-btn {
+    font-size: 13px;
+    padding-top: 3px;
+  }
+
+  .ecoai-login-button {
+    padding: 10px;
+    font-size: 13px;
+    margin-bottom: 2px;
+  }
+}

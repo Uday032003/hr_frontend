@@ -1,0 +1,92 @@
+.ecoai-userbottombar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-top: 2px solid rgb(43, 42, 42);
+  font-family: "Roboto";
+  position: fixed;
+  bottom: 0;
+  border-radius: 15px;
+  z-index: 10;
+  background-color: rgb(20, 20, 20);
+  height: 70px;
+}
+
+.ecoai-userbottombar-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ecoai-userbottombar-item-btn {
+  padding: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  color: #bdbbbb;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: "Roboto";
+}
+
+.ecoai-userbottombar-item-btn:hover {
+  background-color: #2b2626;
+}
+
+.ecoai-userbottombar-item-btn-selected {
+  background-color: #2b2626;
+  font-weight: 500;
+  color: #dcd8d8;
+}
+
+.selected-icon-color {
+  color: #4f99bc;
+}
+
+.bottombar-selected-icon-color {
+  color: #4f99bc;
+  transform: scale(1.3);
+}
+
+.ecoai-userbottombar-icon {
+  font-size: 20px;
+}
+
+.users-icon {
+  font-size: 18px;
+}
+
+.attendance-icon {
+  font-size: 19px;
+}
+
+.calendar-icon {
+  font-size: 21px;
+}
+
+.profile-icon {
+  font-size: 17px;
+}
+
+.task-icon {
+  font-size: 16px;
+  margin-right: 2px;
+}
+
+.ecoai-userbottombar-item-text {
+  font-size: 16px;
+}
+
+@media (min-width: 1000px) {
+  .ecoai-userbottombar-container {
+    display: none;
+  }
+}

@@ -1,0 +1,57 @@
+.ecoai-mail-verification-success-container {
+  background-color: rgb(20, 20, 20);
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto";
+}
+
+.ecoai-mail-verification-success-inner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 40vw;
+  height: 20vh;
+  color: #bdbbbb;
+}
+
+.ecoai-mail-verification-success-loading-view-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+  height: 20vh;
+}
+
+.ecoai-mail-verification-success-text {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 20px;
+}
+
+.ecoai-mail-verification-success-btn {
+  background-color: rgb(20, 20, 20);
+  color: #bdbbbb;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-top: 30px;
+  cursor: pointer;
+  border: none;
+  align-self: flex-end;
+}
+
+.verification-fade-out {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.verification-fade-in {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
