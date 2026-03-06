@@ -63,7 +63,7 @@ const AdminCalendar = () => {
       };
       try {
         const response = await fetch(
-          "http://localhost:3001/selected-date-attendance",
+          "https://hr-backend-k3e7.onrender.com/selected-date-attendance",
           options,
         );
         if (response.ok) {
@@ -124,7 +124,7 @@ const AdminCalendar = () => {
     };
     try {
       const response = await fetch(
-        "http://localhost:3001/selected-date-attendance",
+        "https://hr-backend-k3e7.onrender.com/selected-date-attendance",
         options,
       );
       if (response.ok) {

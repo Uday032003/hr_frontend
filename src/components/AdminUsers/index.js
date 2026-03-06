@@ -56,7 +56,10 @@ const AdminUsers = () => {
         },
       };
       try {
-        const response = await fetch("http://localhost:3001/users", options);
+        const response = await fetch(
+          "https://hr-backend-k3e7.onrender.com/users",
+          options,
+        );
         if (response.ok) {
           const data = await response.json();
           const updatedData = data.map((i) => ({
@@ -124,7 +127,7 @@ const AdminUsers = () => {
     }
     try {
       const response = await fetch(
-        `http://localhost:3001/sort-users?sort=${query1}&order=${query2}`,
+        `https://hr-backend-k3e7.onrender.com/sort-users?sort=${query1}&order=${query2}`,
         options,
       );
       if (response.ok) {
@@ -192,7 +195,10 @@ const AdminUsers = () => {
       body: JSON.stringify(newUserDetails),
     };
     try {
-      const response = await fetch("http://localhost:3001/add-user", options);
+      const response = await fetch(
+        "https://hr-backend-k3e7.onrender.com/add-user",
+        options,
+      );
       if (response.ok) {
         const data = await response.json();
         setFormCurrentStatus(status.success);

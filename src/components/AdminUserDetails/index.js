@@ -80,7 +80,7 @@ const AdminUserDetails = () => {
       };
       try {
         const response = await fetch(
-          `http://localhost:3001/admin-user-details/${id}`,
+          `https://hr-backend-k3e7.onrender.com/admin-user-details/${id}`,
           options,
         );
         if (response.ok) {
@@ -119,7 +119,7 @@ const AdminUserDetails = () => {
       };
       try {
         const response = await fetch(
-          `http://localhost:3001/admin-selected-date-user-attendance-details/${id}`,
+          `https://hr-backend-k3e7.onrender.com/admin-selected-date-user-attendance-details/${id}`,
           options,
         );
         if (response.ok) {

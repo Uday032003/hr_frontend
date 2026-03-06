@@ -29,7 +29,7 @@ const UserSettings = () => {
       };
       try {
         const response = await fetch(
-          "http://localhost:3001/user-details",
+          "https://hr-backend-k3e7.onrender.com/user-details",
           options,
         );
         if (response.ok) {
@@ -65,7 +65,7 @@ const UserSettings = () => {
     };
     try {
       const response = await fetch(
-        "http://localhost:3001/update-theme",
+        "https://hr-backend-k3e7.onrender.com/update-theme",
         options,
       );
       if (response.ok) {

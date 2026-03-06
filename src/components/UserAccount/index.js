@@ -45,7 +45,7 @@ const UserAccount = () => {
       };
       try {
         const response = await fetch(
-          "http://localhost:3001/user-details",
+          "https://hr-backend-k3e7.onrender.com/user-details",
           options,
         );
         if (response.ok) {
@@ -94,7 +94,7 @@ const UserAccount = () => {
     };
     try {
       const response = await fetch(
-        "http://localhost:3001/user-details",
+        "https://hr-backend-k3e7.onrender.com/user-details",
         options,
       );
       if (response.ok) {
@@ -133,7 +133,7 @@ const UserAccount = () => {
     };
     try {
       const response = await fetch(
-        "http://localhost:3001/update-user-details",
+        "https://hr-backend-k3e7.onrender.com/update-user-details",
         options,
       );
       if (response.status === 409) {

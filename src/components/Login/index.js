@@ -79,7 +79,10 @@ const Login = () => {
       body: JSON.stringify(userDetails),
     };
     try {
-      const response = await fetch("http://localhost:3001/login", options);
+      const response = await fetch(
+        "https://hr-backend-k3e7.onrender.com/login",
+        options,
+      );
       if (response.ok) {
         const data = await response.json();
         const jwtToken = data.jwtToken;

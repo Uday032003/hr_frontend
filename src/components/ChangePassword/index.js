@@ -116,7 +116,10 @@ const ChangePassword = () => {
       body: JSON.stringify(userMail),
     };
     try {
-      const response = await fetch("http://localhost:3001/send-code", options);
+      const response = await fetch(
+        "https://hr-backend-k3e7.onrender.com/send-code",
+        options,
+      );
       if (response.ok) {
         setChangePasswordStatus(status.codeSent);
         setErrorMsg("");
@@ -143,7 +146,10 @@ const ChangePassword = () => {
       body: JSON.stringify(userMail),
     };
     try {
-      const response = await fetch("http://localhost:3001/send-code", options);
+      const response = await fetch(
+        "https://hr-backend-k3e7.onrender.com/send-code",
+        options,
+      );
       if (response.ok) {
         setChangePasswordStatus(status.codeSent);
         setErrorMsg("");
@@ -163,7 +169,7 @@ const ChangePassword = () => {
     setChangePasswordStatus(status.loadingCodeSent);
     try {
       const response = await fetch(
-        `http://localhost:3001/verify-code/${changePasswordCode}`,
+        `https://hr-backend-k3e7.onrender.com/verify-code/${changePasswordCode}`,
       );
       if (response.ok) {
         setChangePasswordStatus(status.resetPassword);
@@ -193,7 +199,7 @@ const ChangePassword = () => {
     };
     try {
       const response = await fetch(
-        "http://localhost:3001/change-password",
+        "https://hr-backend-k3e7.onrender.com/change-password",
         options,
       );
       if (response.ok) {

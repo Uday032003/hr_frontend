@@ -50,7 +50,7 @@ const Tasks = () => {
       };
       try {
         const response = await fetch(
-          "http://localhost:3001/fetch-today-tasks",
+          "https://hr-backend-k3e7.onrender.com/fetch-today-tasks",
           options,
         );
         if (response.ok) {
@@ -90,7 +90,10 @@ const Tasks = () => {
       body: JSON.stringify(taskDetails),
     };
     try {
-      const response = await fetch("http://localhost:3001/add-task", options);
+      const response = await fetch(
+        "https://hr-backend-k3e7.onrender.com/add-task",
+        options,
+      );
       if (response.ok) {
         const data = await response.json();
         setUserTasks(data.tasks);
@@ -120,7 +123,7 @@ const Tasks = () => {
     };
     try {
       const response = await fetch(
-        "http://localhost:3001/delete-task",
+        "https://hr-backend-k3e7.onrender.com/delete-task",
         options,
       );
       if (response.ok) {

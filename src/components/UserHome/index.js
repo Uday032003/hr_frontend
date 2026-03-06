@@ -102,7 +102,7 @@ const UserHome = () => {
       };
       try {
         const response = await fetch(
-          "http://localhost:3001/user-today-details",
+          "https://hr-backend-k3e7.onrender.com/user-today-details",
           options,
         );
         if (response.ok) {
@@ -169,7 +169,7 @@ const UserHome = () => {
     };
     try {
       const response = await fetch(
-        "http://localhost:3001/update-selected-date",
+        "https://hr-backend-k3e7.onrender.com/update-selected-date",
         options,
       );
       if (response.ok) {
@@ -195,7 +195,7 @@ const UserHome = () => {
     };
     try {
       const response = await fetch(
-        "http://localhost:3001/attendance/logout",
+        "https://hr-backend-k3e7.onrender.com/attendance/logout",
         options,
       );
       console.log(response);
@@ -227,7 +227,7 @@ const UserHome = () => {
     };
     try {
       const response = await fetch(
-        "http://localhost:3001/attendance/break-out",
+        "https://hr-backend-k3e7.onrender.com/attendance/break-out",
         options,
       );
       console.log(response);
@@ -259,7 +259,7 @@ const UserHome = () => {
     };
     try {
       const response = await fetch(
-        "http://localhost:3001/attendance/break-in",
+        "https://hr-backend-k3e7.onrender.com/attendance/break-in",
         options,
       );
       console.log(response);

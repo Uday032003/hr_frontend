@@ -50,7 +50,7 @@ const Verify = () => {
     };
     try {
       const response = await fetch(
-        "http://localhost:3001/resend-verification",
+        "https://hr-backend-k3e7.onrender.com/resend-verification",
         options,
       );
       if (response.ok) {

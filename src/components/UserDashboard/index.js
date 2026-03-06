@@ -56,7 +56,7 @@
 //       };
 //       try {
 //         const attendanceResponse = await fetch(
-//           "http://localhost:3001/user-attendance-dates",
+//           "https://hr-backend-k3e7.onrender.com/user-attendance-dates",
 //           options
 //         );
 //         if (attendanceResponse.ok) {
@@ -68,7 +68,7 @@
 //           }
 //         }
 //         const response = await fetch(
-//           "http://localhost:3001/user-details",
+//           "https://hr-backend-k3e7.onrender.com/user-details",
 //           options
 //         );
 //         if (response.ok) {
@@ -115,7 +115,7 @@
 //     };
 //     try {
 //       const response = await fetch(
-//         "http://localhost:3001/update-selected-date",
+//         "https://hr-backend-k3e7.onrender.com/update-selected-date",
 //         options
 //       );
 //       if (response.ok) {

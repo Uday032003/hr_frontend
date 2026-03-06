@@ -59,7 +59,7 @@ const AdminAttendanceManagement = () => {
       };
       try {
         const response = await fetch(
-          `http://localhost:3001/fetching-attendance-details?jobType=${selectOptionValue}`,
+          `https://hr-backend-k3e7.onrender.com/fetching-attendance-details?jobType=${selectOptionValue}`,
           options,
         );
         if (response.ok) {
@@ -165,7 +165,7 @@ const AdminAttendanceManagement = () => {
     }
     try {
       const response = await fetch(
-        `http://localhost:3001/sorting-attendance-details?sort=${query1}&order=${query2}&jobType=${selectOptionValue}`,
+        `https://hr-backend-k3e7.onrender.com/sorting-attendance-details?sort=${query1}&order=${query2}&jobType=${selectOptionValue}`,
         options,
       );
       if (response.ok) {
@@ -234,7 +234,7 @@ const AdminAttendanceManagement = () => {
     };
     try {
       const response = await fetch(
-        `http://localhost:3001/fetching-attendance-details?jobType=${selectOptionValue}`,
+        `https://hr-backend-k3e7.onrender.com/fetching-attendance-details?jobType=${selectOptionValue}`,
         options,
       );
       if (response.ok) {

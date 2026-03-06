@@ -130,7 +130,7 @@ const AdminDashboard = () => {
       };
       try {
         const response = await fetch(
-          "http://localhost:3001/users-today-details",
+          "https://hr-backend-k3e7.onrender.com/users-today-details",
           options,
         );
         if (response.ok) {
@@ -366,7 +366,7 @@ const AdminDashboard = () => {
     };
     try {
       const response = await fetch(
-        "http://localhost:3001/offline-users-today",
+        "https://hr-backend-k3e7.onrender.com/offline-users-today",
         options,
       );
       if (response.ok) {

@@ -277,7 +277,7 @@ const UserCalendar = () => {
       const year = viewDate.getFullYear();
       try {
         const attendanceResponse = await fetch(
-          `http://localhost:3001/user-attendance-dates?month=${month}&year=${year}`,
+          `https://hr-backend-k3e7.onrender.com/user-attendance-dates?month=${month}&year=${year}`,
           options,
         );
         if (attendanceResponse.ok) {
@@ -298,7 +298,7 @@ const UserCalendar = () => {
           }
         }
         const response = await fetch(
-          "http://localhost:3001/user-details",
+          "https://hr-backend-k3e7.onrender.com/user-details",
           options,
         );
         if (response.ok) {
@@ -354,7 +354,7 @@ const UserCalendar = () => {
     };
     try {
       const response = await fetch(
-        "http://localhost:3001/update-selected-date",
+        "https://hr-backend-k3e7.onrender.com/update-selected-date",
         options,
       );
       if (response.ok) {

@@ -45,7 +45,7 @@ const AdminDataManager = () => {
     setExportBtnLoading(true);
     try {
       const response = await fetch(
-        `http://localhost:3001/download?table=${tableName}`,
+        `https://hr-backend-k3e7.onrender.com/download?table=${tableName}`,
         {
           method: "GET",
           headers: {
@@ -91,7 +91,7 @@ const AdminDataManager = () => {
       formData.append("file", file);
       formData.append("secretCode", secretCode);
       const response = await fetch(
-        `http://localhost:3001/import-${radioBtnSelected}`,
+        `https://hr-backend-k3e7.onrender.com/import-${radioBtnSelected}`,
         {
           method: "POST",
           headers: {

@@ -98,7 +98,7 @@ const MyAttendance = () => {
       };
       try {
         const response = await fetch(
-          "http://localhost:3001/user-details",
+          "https://hr-backend-k3e7.onrender.com/user-details",
           options,
         );
         if (response.ok) {
@@ -153,7 +153,7 @@ const MyAttendance = () => {
       };
       try {
         const response = await fetch(
-          "http://localhost:3001/user-selected-date-attendance-details",
+          "https://hr-backend-k3e7.onrender.com/user-selected-date-attendance-details",
           options,
         );
         if (response.ok) {
@@ -209,14 +209,17 @@ const MyAttendance = () => {
     try {
       const ipRes = await fetch("https://api.ipify.org?format=json");
       const { ip: publicIP } = await ipRes.json();
-      const response = await fetch("http://localhost:3001/verify-location", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${jwtToken}`,
+      const response = await fetch(
+        "https://hr-backend-k3e7.onrender.com/verify-location",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${jwtToken}`,
+          },
+          body: JSON.stringify({ detectedIP: publicIP }),
         },
-        body: JSON.stringify({ detectedIP: publicIP }),
-      });
+      );
       const data = await response.json();
       if (response.ok) {
         setWfoLoginModalText(data.message);
@@ -248,7 +251,7 @@ const MyAttendance = () => {
     };
     try {
       const response = await fetch(
-        "http://localhost:3001/attendance/login",
+        "https://hr-backend-k3e7.onrender.com/attendance/login",
         options,
       );
       if (response.ok) {
@@ -282,7 +285,7 @@ const MyAttendance = () => {
     };
     try {
       const response = await fetch(
-        "http://localhost:3001/attendance/logout",
+        "https://hr-backend-k3e7.onrender.com/attendance/logout",
         options,
       );
       if (response.ok) {
@@ -313,7 +316,7 @@ const MyAttendance = () => {
     };
     try {
       const response = await fetch(
-        "http://localhost:3001/attendance/break-out",
+        "https://hr-backend-k3e7.onrender.com/attendance/break-out",
         options,
       );
       if (response.ok) {
@@ -344,7 +347,7 @@ const MyAttendance = () => {
     };
     try {
       const response = await fetch(
-        "http://localhost:3001/attendance/break-in",
+        "https://hr-backend-k3e7.onrender.com/attendance/break-in",
         options,
       );
       if (response.ok) {

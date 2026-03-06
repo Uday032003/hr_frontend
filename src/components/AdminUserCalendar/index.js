@@ -289,7 +289,7 @@ const AdminUserCalendar = () => {
       const year = viewDate.getFullYear();
       try {
         const response = await fetch(
-          `http://localhost:3001/admin-user-attendance-dates/${id}?month=${month}&year=${year}`,
+          `https://hr-backend-k3e7.onrender.com/admin-user-attendance-dates/${id}?month=${month}&year=${year}`,
           options,
         );
         if (response.status === 404) {
@@ -352,7 +352,7 @@ const AdminUserCalendar = () => {
     };
     try {
       const response = await fetch(
-        "http://localhost:3001/update-selected-date",
+        "https://hr-backend-k3e7.onrender.com/update-selected-date",
         options,
       );
       if (response.ok) {
@@ -379,7 +379,7 @@ const AdminUserCalendar = () => {
     };
     try {
       const response = await fetch(
-        `http://localhost:3001/change-user-role/${id}`,
+        `https://hr-backend-k3e7.onrender.com/change-user-role/${id}`,
         options,
       );
       if (response.ok) {
@@ -404,7 +404,7 @@ const AdminUserCalendar = () => {
     };
     try {
       const response = await fetch(
-        `http://localhost:3001/delete-employee/${id}`,
+        `https://hr-backend-k3e7.onrender.com/delete-employee/${id}`,
         options,
       );
       if (response.ok) {
