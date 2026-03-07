@@ -10,6 +10,7 @@
   justify-content: center;
   align-items: center;
   font-family: "Roboto";
+  position: relative; /*Dummy login buttons*/
 }
 
 .ecoai-login-info-form-container {
@@ -281,6 +282,54 @@
   opacity: 1;
   transition: opacity 0.4s ease;
 }
+
+/*Dummy login buttons*/
+
+.ecoai-login-dummy-login-btns-container {
+  position: absolute;
+  left: center;
+  bottom: 50px;
+  display: flex;
+  gap: 10px;
+}
+
+.ecoai-login-dummy-login-btn {
+  width: 150px;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid rgb(43, 42, 42);
+  border-radius: 5px;
+  color: #bdbbbb;
+  font-family: "Roboto";
+  transition: all 0.3s linear;
+}
+
+.ecoai-login-dummy-login-btn-selected {
+  transform: rotateX(-30deg);
+}
+
+.ecoai-login-dummy-login-btn:hover {
+  border: 1px solid #403f3f;
+}
+
+.dummy-btn-animation {
+  animation: dummy-btn-animation 2s linear infinite;
+}
+
+@keyframes dummy-btn-animation {
+  0% {
+    transform: rotateX(-30deg);
+  }
+  50% {
+    transform: rotateX(-180deg);
+  }
+  100% {
+    transform: rotateX(-360deg);
+  }
+}
+/*Dummy login buttons*/
 
 @media (min-width: 1001px) and (max-width: 1500px) {
   .ecoai-login-logo {
@@ -686,4 +735,18 @@
     font-size: 13px;
     margin-bottom: 2px;
   }
+
+  /*Dummy login buttons*/
+  .ecoai-login-dummy-login-btns-container {
+    flex-direction: column;
+    bottom: 20px;
+  }
+
+  .ecoai-login-dummy-login-btn {
+    width: 120px;
+    font-size: 10px;
+    padding: 5px;
+    border-radius: 4px;
+  }
+  /*Dummy login buttons*/
 }

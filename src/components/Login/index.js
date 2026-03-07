@@ -23,6 +23,10 @@ const Login = () => {
   const [loginMail, changeLoginMail] = useState("");
   const [loginPassword, changeLoginPassword] = useState("");
   const [loginStatus, setLoginStatus] = useState(status.initial);
+  const [dummyBtnLoading, setDummyBtnLoading] = useState({
+    dummyAdmin: false,
+    dummyUser: false,
+  });
   const [loadingTextIndex, setLoadingTextIndex] = useState(0);
   const [errorMsg, setErrorMsg] = useState("");
   const [fadeOut, setFadeOut] = useState(false);
@@ -67,7 +71,7 @@ const Login = () => {
   };
 
   const submittedLoginForm = async (e) => {
-    e.preventDefault();
+    if (e) e.preventDefault();
     setLoginStatus(status.loading);
     const userDetails = {
       mail: loginMail,
@@ -95,6 +99,7 @@ const Login = () => {
           navigate("/admin-dashboard");
         }
         setLoginStatus(status.success);
+        setDummyBtnLoading({ dummyAdmin: false, dummyUser: false });
       } else {
         const data = await response.json();
         setErrorMsg(data.message);
@@ -110,6 +115,18 @@ const Login = () => {
     setTimeout(() => {
       navigate("/change-password");
     }, 400);
+  };
+
+  const clickedToLoginAsAdmin = () => {
+    setDummyBtnLoading({ dummyAdmin: true, dummyUser: false });
+    changeLoginMail("professorshastri@gmail.com");
+    changeLoginPassword("professorshastri");
+  };
+
+  const clickedToLoginAsUser = () => {
+    setDummyBtnLoading({ dummyAdmin: false, dummyUser: true });
+    changeLoginMail("chotabheem@gmail.com");
+    changeLoginPassword("chotabheem");
   };
 
   const jwtToken = Cookies.get("jwt_Token");
@@ -202,6 +219,7 @@ const Login = () => {
             </button>
           </div>
           <button
+            id="ecoai-login-btn"
             disabled={
               !loginMail ||
               loginPassword.length < 6 ||
@@ -238,6 +256,22 @@ const Login = () => {
             </span>
           </p> */}
         </form>
+        <div className="ecoai-login-dummy-login-btns-container">
+          <button
+            type="button"
+            onClick={clickedToLoginAsAdmin}
+            className={`ecoai-login-dummy-login-btn ${dummyBtnLoading.dummyAdmin && loginStatus === status.loading && "dummy-btn-animation"} ${dummyBtnLoading.dummyAdmin && "ecoai-login-dummy-login-btn-selected"}`}
+          >
+            Click me to login as Admin
+          </button>
+          <button
+            type="button"
+            onClick={clickedToLoginAsUser}
+            className={`ecoai-login-dummy-login-btn ${dummyBtnLoading.dummyUser && loginStatus === status.loading && "dummy-btn-animation"} ${dummyBtnLoading.dummyUser && "ecoai-login-dummy-login-btn-selected"}`}
+          >
+            Click me to login as User
+          </button>
+        </div>
       </div>
     </div>
   );
