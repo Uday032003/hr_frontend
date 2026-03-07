@@ -739,7 +739,7 @@
   /*Dummy login buttons*/
   .ecoai-login-dummy-login-btns-container {
     flex-direction: column;
-    bottom: 20px;
+    bottom: 30px;
   }
 
   .ecoai-login-dummy-login-btn {
