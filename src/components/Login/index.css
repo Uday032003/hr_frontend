@@ -2,6 +2,10 @@
   display: none;
 }
 
+.ecoai-login-bg-container::-webkit-scrollbar {
+  display: none;
+}
+
 .ecoai-login-bg-container {
   background-color: rgb(20, 20, 20);
   background-size: cover;
@@ -11,6 +15,7 @@
   align-items: center;
   font-family: "Roboto";
   position: relative; /*Dummy login buttons*/
+  overflow-y: scroll;
 }
 
 .ecoai-login-info-form-container {
